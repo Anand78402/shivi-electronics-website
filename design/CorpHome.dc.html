@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <style>
+    *{box-sizing:border-box;}
+    body{margin:0;background:#ffffff;color:#1c2536;font-family:"IBM Plex Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+    h1,h2,h3{font-family:"Manrope","Segoe UI",system-ui,sans-serif;margin:0;line-height:1.15;letter-spacing:-0.02em;color:#141c2e;}
+    p{margin:0;line-height:1.65;}
+    a{color:#1b3a6b;text-decoration:none;} a:hover{color:#2a5599;}
+    .eyebrow{font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#c0762a;}
+    .wrap{max-width:1440px;margin:0 auto;padding:0 104px;}
+    .btn{display:inline-flex;align-items:center;gap:9px;height:52px;padding:0 28px;font-family:"Manrope",sans-serif;font-weight:700;font-size:15px;border-radius:999px;cursor:pointer;border:0;}
+    .btn-navy{background:#1b3a6b;color:#fff;}
+    .btn-line{background:#fff;color:#1b3a6b;border:1.5px solid #cdd6e4;}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:84px;}
+    .nav a{color:#41506a;font-size:14.5px;font-weight:500;}
+    .nav a:hover{color:#141c2e;}
+    .mark{font-family:"Manrope",sans-serif;font-weight:800;font-size:20px;letter-spacing:-0.02em;color:#141c2e;display:flex;align-items:center;gap:9px;}
+    .dot{width:22px;height:22px;border-radius:7px;background:#1b3a6b;display:inline-flex;align-items:center;justify-content:center;}
+    .card{background:#fff;border:1px solid #e7ebf2;border-radius:16px;padding:26px;box-shadow:0 10px 30px rgba(20,30,60,.06);}
+    .imgph{background:#eef2f8;border-radius:16px;display:flex;align-items:center;justify-content:center;color:#9aa8c0;}
+    .foot{background:#0f1830;color:#aeb9cf;}
+    .foot a{color:#aeb9cf;} .foot a:hover{color:#fff;}
+  </style>
+</helmet>
+
+<div class="wrap">
+  <nav class="nav">
+    <div class="mark"><span class="dot"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>Shivi Electronics System</div>
+    <div style="display:flex;gap:30px;align-items:center;">
+      <a href="#">Products</a><a href="#">Applications</a><a href="#">Services</a><a href="#">About</a><a href="#">Blog</a>
+      <a href="#" class="btn btn-navy" style="height:44px;font-size:14px;">Get a quote</a>
+    </div>
+  </nav>
+</div>
+
+<!-- HERO -->
+<div class="wrap" style="padding-top:64px;padding-bottom:72px;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;">
+    <div>
+      <div class="eyebrow">Total Power Management</div>
+      <h1 style="font-size:56px;margin-top:18px;">Reliable power protection for the equipment you can't afford to lose</h1>
+      <p style="margin-top:22px;font-size:17px;color:#41506a;max-width:480px;">Online UPS, sine-wave inverters, servo stabilizers and transformers &mdash; engineered, built and serviced in India for printing, healthcare, industrial and IT loads.</p>
+      <div style="display:flex;gap:14px;margin-top:32px;">
+        <a href="#" class="btn btn-navy">Explore products</a>
+        <a href="#" class="btn btn-line">Talk to an engineer</a>
+      </div>
+    </div>
+    <div class="imgph" style="min-height:380px;position:relative;overflow:hidden;">
+      <svg width="70%" height="140" viewBox="0 0 300 140"><path d="M0 70 C40 10 70 130 110 70 S180 10 220 70 S290 130 300 70" fill="none" stroke="#1b3a6b" stroke-width="4"/></svg>
+      <span style="position:absolute;bottom:18px;left:18px;font-size:12px;font-weight:600;color:#7c8aa6;">[ Product / facility photo ]</span>
+    </div>
+  </div>
+</div>
+
+<!-- TRUST -->
+<div style="background:#f4f6f9;border-top:1px solid #e7ebf2;border-bottom:1px solid #e7ebf2;">
+  <div class="wrap" style="padding-top:34px;padding-bottom:34px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+    <span style="font-size:13px;font-weight:600;color:#7c8aa6;">Trusted across 9 sectors</span>
+    <div style="display:flex;gap:40px;flex-wrap:wrap;align-items:center;color:#9aa8c0;font-weight:700;font-family:'Manrope',sans-serif;">
+      <span>[ Client logo ]</span><span>[ Client logo ]</span><span>[ Client logo ]</span><span>[ Client logo ]</span><span>[ Client logo ]</span>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<div class="wrap" style="padding-top:76px;padding-bottom:40px;">
+  <div class="eyebrow">What we build</div>
+  <h2 style="font-size:38px;margin-top:14px;max-width:560px;">A complete range of power conditioning and backup systems</h2>
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:40px;">
+    <div class="card"><h3 style="font-size:19px;">Online UPS Systems</h3><p style="font-size:14px;color:#41506a;margin-top:10px;">1&ndash;200 kVA, single &amp; three phase. Double-conversion with built-in galvanic isolation.</p><a href="#" style="font-size:14px;font-weight:700;display:inline-block;margin-top:14px;">Learn more &rarr;</a></div>
+    <div class="card"><h3 style="font-size:19px;">Sine Wave Inverters</h3><p style="font-size:14px;color:#41506a;margin-top:10px;">800 VA&ndash;100 kVA &mdash; home, lift backup and industrial. IGBT PWM, noiseless.</p><a href="#" style="font-size:14px;font-weight:700;display:inline-block;margin-top:14px;">Learn more &rarr;</a></div>
+    <div class="card"><h3 style="font-size:19px;">Servo Voltage Stabilizers</h3><p style="font-size:14px;color:#41506a;margin-top:10px;">Air-cooled 1&ndash;150 kVA, oil-cooled to 1000 kVA. &plusmn;1% output regulation.</p><a href="#" style="font-size:14px;font-weight:700;display:inline-block;margin-top:14px;">Learn more &rarr;</a></div>
+    <div class="card"><h3 style="font-size:19px;">CVT &amp; Isolation Transformers</h3><p style="font-size:14px;color:#41506a;margin-top:10px;">CVT 500 VA&ndash;5 kVA and isolation transformers 1&ndash;500 kVA for noise-free power.</p><a href="#" style="font-size:14px;font-weight:700;display:inline-block;margin-top:14px;">Learn more &rarr;</a></div>
+    <div class="card"><h3 style="font-size:19px;">Batteries</h3><p style="font-size:14px;color:#41506a;margin-top:10px;">Tubular batteries 150&ndash;220 Ah &mdash; supply, string design, load testing, replacement.</p><a href="#" style="font-size:14px;font-weight:700;display:inline-block;margin-top:14px;">Learn more &rarr;</a></div>
+    <div class="card" style="background:#1b3a6b;color:#fff;border-color:#1b3a6b;"><h3 style="font-size:19px;color:#fff;">Not sure what you need?</h3><p style="font-size:14px;color:#c6d3e8;margin-top:10px;">Our engineers size the solution around your load, input quality and future growth.</p><a href="#" style="font-size:14px;font-weight:700;color:#f0b072;display:inline-block;margin-top:14px;">Request a site survey &rarr;</a></div>
+  </div>
+</div>
+
+<!-- WHY -->
+<div class="wrap" style="padding-top:56px;padding-bottom:76px;">
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;">
+    <div><h3 style="font-size:18px;">Customised per application</h3><p style="font-size:14px;color:#41506a;margin-top:10px;">Input range, isolation, runtime and form factor built to the machine it protects.</p></div>
+    <div><h3 style="font-size:18px;">Robust product quality</h3><p style="font-size:14px;color:#41506a;margin-top:10px;">Heavy-duty construction, in-house testing, dedicated R&amp;D and QC divisions.</p></div>
+    <div><h3 style="font-size:18px;">Cost competitive</h3><p style="font-size:14px;color:#41506a;margin-top:10px;">Advanced technology at value prices, with service capability across India.</p></div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="wrap" style="padding-bottom:76px;">
+  <div style="background:#f4f6f9;border-radius:20px;padding:48px 52px;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;">
+    <h2 style="font-size:30px;max-width:560px;">Planning a power protection setup? Start with a load study.</h2>
+    <a href="#" class="btn btn-navy">Request a site survey</a>
+  </div>
+</div>
+
+<footer class="foot">
+  <div class="wrap" style="padding-top:56px;padding-bottom:36px;display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;">
+    <div>
+      <div class="mark" style="color:#fff;"><span class="dot"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>Shivi Electronics System</div>
+      <p style="margin-top:14px;font-size:14px;max-width:320px;">Total power management &mdash; Online UPS, inverters, stabilizers and transformers for critical loads.</p>
+      <p style="margin-top:16px;font-size:13px;color:#7c88a4;">[Unit address line], [City] &ndash; [PIN], [State], India</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:9px;font-size:14px;"><span style="font-weight:700;color:#fff;">Company</span><a href="#">About</a><a href="#">Applications</a><a href="#">Services</a><a href="#">Blog</a></div>
+    <div style="display:flex;flex-direction:column;gap:9px;font-size:14px;"><span style="font-weight:700;color:#fff;">Contact</span><a href="#">[+91 XXXXX XXXXX]</a><a href="#">[hello@shivielectronics.in]</a><a href="#">Service request</a></div>
+  </div>
+  <div style="border-top:1px solid #223052;">
+    <div class="wrap" style="padding-top:18px;padding-bottom:22px;font-size:12px;color:#7c88a4;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+      <span>&copy; 2026 Shivi Electronics System</span><span>CIN [&mdash;] &middot; IS 16242 / IEC 62040-1 &middot; ISO 9001 &middot; BIS</span>
+    </div>
+  </div>
+</footer>
+
+</x-dc>
+</body>
+</html>

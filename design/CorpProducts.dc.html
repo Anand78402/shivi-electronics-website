@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <style>
+    *{box-sizing:border-box;}
+    body{margin:0;background:#ffffff;color:#1c2536;font-family:"IBM Plex Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+    h1,h2,h3{font-family:"Manrope","Segoe UI",system-ui,sans-serif;margin:0;line-height:1.15;letter-spacing:-0.02em;color:#141c2e;}
+    p{margin:0;line-height:1.65;}
+    a{color:#1b3a6b;text-decoration:none;} a:hover{color:#2a5599;}
+    .eyebrow{font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#c0762a;}
+    .wrap{max-width:1440px;margin:0 auto;padding:0 104px;}
+    .btn{display:inline-flex;align-items:center;gap:9px;height:52px;padding:0 28px;font-family:"Manrope",sans-serif;font-weight:700;font-size:15px;border-radius:999px;cursor:pointer;border:0;}
+    .btn-navy{background:#1b3a6b;color:#fff;}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:84px;}
+    .nav a{color:#41506a;font-size:14.5px;font-weight:500;} .nav a:hover{color:#141c2e;}
+    .mark{font-family:"Manrope",sans-serif;font-weight:800;font-size:20px;letter-spacing:-0.02em;color:#141c2e;display:flex;align-items:center;gap:9px;}
+    .dot{width:22px;height:22px;border-radius:7px;background:#1b3a6b;display:inline-flex;align-items:center;justify-content:center;}
+    .card{background:#fff;border:1px solid #e7ebf2;border-radius:16px;padding:24px;box-shadow:0 10px 30px rgba(20,30,60,.06);display:flex;flex-direction:column;gap:10px;min-height:200px;}
+    .foot{background:#0f1830;color:#aeb9cf;} .foot a{color:#aeb9cf;} .foot a:hover{color:#fff;}
+    .chip{border:1.5px solid #cdd6e4;border-radius:999px;height:40px;padding:0 18px;display:inline-flex;align-items:center;font-family:"Manrope",sans-serif;font-weight:700;font-size:13.5px;cursor:pointer;background:#fff;color:#41506a;}
+  </style>
+</helmet>
+
+<div class="wrap">
+  <nav class="nav">
+    <div class="mark"><span class="dot"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>Shivi Electronics System</div>
+    <div style="display:flex;gap:30px;align-items:center;">
+      <a href="#" style="color:#1b3a6b;font-weight:700;">Products</a><a href="#">Applications</a><a href="#">Services</a><a href="#">About</a><a href="#">Blog</a>
+      <a href="#" class="btn btn-navy" style="height:44px;font-size:14px;">Get a quote</a>
+    </div>
+  </nav>
+</div>
+
+<div class="wrap" style="padding-top:56px;padding-bottom:36px;">
+  <div class="eyebrow">Products</div>
+  <h1 style="font-size:46px;margin-top:14px;">Find the right system for your load</h1>
+  <p style="margin-top:16px;max-width:600px;font-size:16px;color:#41506a;">A full range of power conditioning and backup solutions. Filter by category to narrow down.</p>
+</div>
+
+<!-- FILTER -->
+<div class="wrap" style="padding-bottom:10px;">
+  <div style="display:flex;flex-wrap:wrap;gap:10px;">
+    <sc-for list="{{catRow}}" as="c" hint-placeholder-count="7">
+      <button style="{{c.style}}" onClick="{{c.pick}}">{{c.label}}</button>
+    </sc-for>
+  </div>
+  <p style="margin-top:16px;font-size:13px;color:#7c8aa6;">Showing {{count}} of 15 products</p>
+</div>
+
+<!-- GRID -->
+<div class="wrap" style="padding-top:14px;padding-bottom:64px;">
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;">
+    <sc-for list="{{items}}" as="p" hint-placeholder-count="15">
+      <article class="card">
+        <div class="eyebrow" style="color:#7c8aa6;">{{p.tag}} &middot; {{p.n}}</div>
+        <h3 style="font-size:18px;">{{p.name}}</h3>
+        <p style="font-size:13.5px;color:#41506a;flex-grow:1;">{{p.spec}}</p>
+        <a href="#" style="font-size:14px;font-weight:700;">View details &rarr;</a>
+      </article>
+    </sc-for>
+  </div>
+</div>
+
+<div class="wrap" style="padding-bottom:72px;">
+  <div style="background:#f4f6f9;border-radius:20px;padding:44px 50px;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;">
+    <h2 style="font-size:28px;max-width:560px;">Not sure which model fits? Our engineers will size it for you.</h2>
+    <a href="#" class="btn btn-navy">Request a site survey</a>
+  </div>
+</div>
+
+<footer class="foot">
+  <div class="wrap" style="padding-top:56px;padding-bottom:36px;display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;">
+    <div>
+      <div class="mark" style="color:#fff;"><span class="dot"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>Shivi Electronics System</div>
+      <p style="margin-top:14px;font-size:14px;max-width:320px;">Total power management &mdash; Online UPS, inverters, stabilizers and transformers for critical loads.</p>
+      <p style="margin-top:16px;font-size:13px;color:#7c88a4;">[Unit address line], [City] &ndash; [PIN], [State], India</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:9px;font-size:14px;"><span style="font-weight:700;color:#fff;">Company</span><a href="#">About</a><a href="#">Applications</a><a href="#">Services</a><a href="#">Blog</a></div>
+    <div style="display:flex;flex-direction:column;gap:9px;font-size:14px;"><span style="font-weight:700;color:#fff;">Contact</span><a href="#">[+91 XXXXX XXXXX]</a><a href="#">[hello@shivielectronics.in]</a><a href="#">Service request</a></div>
+  </div>
+  <div style="border-top:1px solid #223052;">
+    <div class="wrap" style="padding-top:18px;padding-bottom:22px;font-size:12px;color:#7c88a4;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+      <span>&copy; 2026 Shivi Electronics System</span><span>CIN [&mdash;] &middot; IS 16242 / IEC 62040-1 &middot; ISO 9001 &middot; BIS</span>
+    </div>
+  </div>
+</footer>
+
+</x-dc>
+<script data-dc-script>
+class Component extends DCLogic {
+  constructor(props){ super(props); this.state = { filter: 'All' }; }
+  renderVals(){
+    const f = this.state.filter;
+    const cats = ['All','Online UPS','Inverters','Stabilizers','Transformers','Batteries','Solar'];
+    const all = [
+      { name:'Industrial Online UPS', cat:'Online UPS', tag:'UPS', spec:'3–200 kVA, 1φ & 3φ. Double-conversion, built-in galvanic isolation transformer, IGBT rectifier & inverter, generator compatible.' },
+      { name:'Compact Online UPS', cat:'Online UPS', tag:'UPS', spec:'1–10 kVA single phase. Digitized microprocessor control, input PF correction, EMI/RFI filters, cold start, SNMP-ready.' },
+      { name:'Three-Phase Online UPS', cat:'Online UPS', tag:'UPS', spec:'5–50 kVA, 3φ in / 1φ or 3φ out. N+X parallel redundancy, optional galvanic isolation, VRLA battery, static + manual bypass.' },
+      { name:'Line-Interactive UPS', cat:'Online UPS', tag:'UPS', spec:'600 VA–2 kVA. Boost/buck AVR, EMI/RFI/surge protection, USB port, cold start — for PCs and small offices.' },
+      { name:'Sine Wave Home Inverter', cat:'Inverters', tag:'INVERTER', spec:'800 VA–15 kVA. Pure sine wave, wide input range, built-in high-capacity charger, LCD status, automatic start.' },
+      { name:'Lift Backup Inverter', cat:'Inverters', tag:'INVERTER', spec:'6–60 kVA, 3φ. IGBT PWM, automatic nearest-floor rescue, noiseless, eco-friendly alternative to a diesel genset.' },
+      { name:'Industrial Inverter', cat:'Inverters', tag:'INVERTER', spec:'3–100 kVA. High peak-current IGBTs, single-phasing protection, R-Y-B metering, 0–50 °C continuous duty.' },
+      { name:'Sine Wave UPS', cat:'Inverters', tag:'INVERTER', spec:'800 VA–10 kVA. DSP control, pure sine wave, long backup hours, mixed loads — computers plus lighting.' },
+      { name:'Servo Stabilizer — Air Cooled', cat:'Stabilizers', tag:'STABILIZER', spec:'1–30 kVA single phase, 3–150 kVA three phase. Synchronous stepper motor, ±1% output, single-phasing preventer.' },
+      { name:'Servo Stabilizer — Oil Cooled', cat:'Stabilizers', tag:'STABILIZER', spec:'25–1000 kVA, 3φ. Efficiency >98%, 10 ms response, zero hunting, 24×7 duty, digital P-P / P-N metering.' },
+      { name:'Automatic Voltage Stabilizer', cat:'Stabilizers', tag:'STABILIZER', spec:'4–5 kVA wall-mount. Microprocessor step up/down for air-conditioners, digital display, auto cut-off outside input range.' },
+      { name:'Constant Voltage Transformer (CVT)', cat:'Transformers', tag:'CVT', spec:'500 VA–5 kVA. Ferro-resonant, maintenance-free, ~90% efficiency, galvanic isolation — medical and lab loads.' },
+      { name:'Isolation Transformer', cat:'Transformers', tag:'ISOLATION', spec:'1–500 kVA. Isolation, Ultra-Isolation (K-rated) and Auto types. Electrostatic shielding, transverse-mode noise rejection.' },
+      { name:'Tubular Battery', cat:'Batteries', tag:'BATTERY', spec:'150–220 Ah lead-acid tubular for UPS, inverter and solar strings. Emergency lighting and medical backup.' },
+      { name:'Solar Power System', cat:'Solar', tag:'SOLAR', spec:'Renewable, clean supply for critical sites. High conversion efficiency, long life, low maintenance; solar-compatible UPS and inverters.' }
+    ];
+    const list = (f === 'All' ? all : all.filter(p => p.cat === f))
+      .map((p, i) => ({ ...p, n: String(i + 1).padStart(2, '0') }));
+    const base = 'height:40px;padding:0 18px;border:1.5px solid #cdd6e4;border-radius:999px;cursor:pointer;font-family:"Manrope",sans-serif;font-weight:700;font-size:13.5px;';
+    const catRow = cats.map(c => ({
+      label: c,
+      pick: () => this.setState({ filter: c }),
+      style: base + (c === f ? 'background:#1b3a6b;color:#ffffff;border-color:#1b3a6b;' : 'background:#ffffff;color:#41506a;')
+    }));
+    return { catRow, items: list, count: list.length };
+  }
+}
+</script>
+</body>
+</html>

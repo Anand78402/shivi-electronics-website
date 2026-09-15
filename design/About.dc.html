@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+  <style>
+    *{box-sizing:border-box;}
+    body{margin:0;background:#ffffff;color:#0a0e1a;font-family:"IBM Plex Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+    h1,h2,h3{font-family:"Space Grotesk","Arial Black",system-ui,sans-serif;margin:0;line-height:1.04;letter-spacing:-0.02em;}
+    p{margin:0;line-height:1.55;}
+    a{color:#132a9e;text-decoration:none;} a:hover{color:#1b3bd6;}
+    .eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#132a9e;}
+    .wrap{max-width:1440px;margin:0 auto;padding:0 100px;}
+    .btn{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 26px;font-weight:600;font-size:15px;border:2px solid #0a0e1a;cursor:pointer;font-family:inherit;}
+    .btn-amber{background:#f5a300;color:#0a0e1a;} .btn-ink{background:#0a0e1a;color:#fff;} .btn-ghost{background:transparent;color:#0a0e1a;}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:88px;border-bottom:2px solid #0a0e1a;}
+    .nav-links{display:flex;align-items:center;gap:26px;font-size:14px;font-weight:500;} .nav-links a{color:#0a0e1a;}
+    .mark{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:22px;letter-spacing:-0.03em;display:flex;align-items:baseline;gap:8px;}
+    .mark small{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:0.2em;font-weight:500;color:#3a4256;}
+    .foot{background:#0a0e1a;color:#c7cbd6;} .foot a{color:#c7cbd6;} .foot a:hover{color:#f5a300;}
+    .crumb{font-family:"IBM Plex Mono",monospace;font-size:12px;color:#6b7288;letter-spacing:0.06em;}
+    .lead{font-size:19px;color:#3a4256;line-height:1.6;}
+  </style>
+</helmet>
+
+<div class="wrap">
+  <nav class="nav">
+    <div class="mark">SHIVI <small>ELECTRONICS&nbsp;SYSTEM</small></div>
+    <div class="nav-links">
+      <a href="#">Products</a><a href="#">Applications</a><a href="#">Services</a>
+      <a href="#" style="color:#132a9e;">About</a><a href="#">Blog</a><a href="#">Contact</a>
+      <a href="#" class="btn btn-amber" style="height:44px;padding:0 18px;font-size:14px;">Get a quote</a>
+    </div>
+  </nav>
+</div>
+
+<!-- HEADER -->
+<div class="wrap" style="padding-top:56px;padding-bottom:64px;">
+  <div class="crumb">Home / About</div>
+  <h1 style="font-size:72px;margin-top:18px;">About Shivi<br>Electronics System</h1>
+  <p class="lead" style="margin-top:26px;max-width:760px;">A renowned name in the Indian power electronics industry, providing leading-edge power solutions at value prices &mdash; a single comprehensive provider of Total Power Management for India and overseas.</p>
+</div>
+
+<!-- WHO WE ARE -->
+<div style="background:#0a0e1a;color:#fff;">
+  <div class="wrap" style="padding-top:72px;padding-bottom:72px;display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;">
+    <div><div class="eyebrow" style="color:#f5a300;">Who we are</div>
+      <h2 style="font-size:34px;margin-top:16px;">Founded by engineers, technocrats and entrepreneurs</h2></div>
+    <div style="display:flex;flex-direction:column;gap:18px;font-size:16px;color:#c7cbd6;">
+      <p>Shivi Electronics System is a manufacturer of uninterruptible power supplies and power conditioning and backup products, offering a full range of power protection across Indian cities.</p>
+      <p>Our ideology rests on a solid foundation of research and development, guided by a customer-first philosophy. Our solutions let customers enhance business productivity by integrating their existing setup with our robust systems.</p>
+      <p>Key strengths: cost competitiveness, product quality, and extensive experience across industries, institutions, IT, residential, telecom and healthcare sectors.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCT PORTFOLIO -->
+<div class="wrap" style="padding-top:80px;padding-bottom:24px;">
+  <div class="eyebrow">Product portfolio</div>
+  <h2 style="font-size:38px;margin-top:16px;">Comprehensive power protection portfolio</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:36px;border:2px solid #0a0e1a;font-size:15px;">
+    <div style="padding:20px 24px;border-right:2px solid #0a0e1a;border-bottom:2px solid #0a0e1a;">Online UPS &mdash; 1 to 200 kVA, single &amp; three phase</div>
+    <div style="padding:20px 24px;border-bottom:2px solid #0a0e1a;">Line-Interactive UPS &mdash; 600 VA to 2 kVA</div>
+    <div style="padding:20px 24px;border-right:2px solid #0a0e1a;border-bottom:2px solid #0a0e1a;">Sine Wave Inverter &mdash; 800 VA to 100 kVA</div>
+    <div style="padding:20px 24px;border-bottom:2px solid #0a0e1a;">Lift Backup Inverter &mdash; 6 to 60 kVA</div>
+    <div style="padding:20px 24px;border-right:2px solid #0a0e1a;border-bottom:2px solid #0a0e1a;">Constant Voltage Transformers &mdash; 500 VA to 5 kVA</div>
+    <div style="padding:20px 24px;border-bottom:2px solid #0a0e1a;">Servo Stabilizers &mdash; air 1 to 150 kVA, oil to 1000 kVA</div>
+    <div style="padding:20px 24px;border-right:2px solid #0a0e1a;">Isolation Transformers &mdash; 1 to 500 kVA</div>
+    <div style="padding:20px 24px;">Tubular Batteries &amp; Solar Power Products</div>
+  </div>
+</div>
+
+<!-- SERVICES + SEGMENTS -->
+<div class="wrap" style="padding-top:64px;padding-bottom:24px;display:grid;grid-template-columns:1fr 1fr;gap:56px;">
+  <div>
+    <div class="eyebrow">Services</div>
+    <h2 style="font-size:30px;margin-top:14px;">A wide variety of services</h2>
+    <div style="display:flex;flex-direction:column;gap:8px;margin-top:20px;font-size:15px;color:#3a4256;">
+      <span>Consulting &amp; solution design</span><span>Site survey</span><span>Product customization</span><span>Installation &amp; commissioning</span><span>Training</span><span>Warranty support</span><span>Annual Maintenance Contract (AMC)</span><span>AMC of multi-brand UPS systems</span><span>Ad-hoc maintenance &amp; repair</span><span>Upgradation of existing UPS</span>
+    </div>
+  </div>
+  <div>
+    <div class="eyebrow">Market segments</div>
+    <h2 style="font-size:30px;margin-top:14px;">Built for maximum uptime</h2>
+    <p style="margin-top:20px;font-size:15px;color:#3a4256;">Solutions designed for industrial, institutional, government, education, commercial, residential, IT, telecom, healthcare, printing and retail applications &mdash; sized for maximum system availability.</p>
+    <div style="margin-top:24px;border-left:2px solid #f5a300;padding-left:18px;">
+      <div class="eyebrow" style="color:#0a0e1a;">Centralized production &amp; testing</div>
+      <p style="margin-top:8px;font-size:14px;color:#3a4256;">Integrated production, testing and delivery from one centre &mdash; quality control and timely deliveries.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ADVANTAGES -->
+<div style="background:#eceef4;margin-top:64px;">
+  <div class="wrap" style="padding-top:72px;padding-bottom:72px;">
+    <h2 style="font-size:36px;">The Shivi advantages</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:36px;">
+      <div style="background:#fff;border:2px solid #0a0e1a;padding:24px;font-weight:600;">Complete range of power electronic products</div>
+      <div style="background:#fff;border:2px solid #0a0e1a;padding:24px;font-weight:600;">Advanced technologies at competitive prices</div>
+      <div style="background:#fff;border:2px solid #0a0e1a;padding:24px;font-weight:600;">In-house production &amp; testing facilities</div>
+      <div style="background:#fff;border:2px solid #0a0e1a;padding:24px;font-weight:600;">Superior product and service quality</div>
+      <div style="background:#fff;border:2px solid #0a0e1a;padding:24px;font-weight:600;">Unmatched production &amp; delivery capability</div>
+      <div style="background:#fff;border:2px solid #0a0e1a;padding:24px;font-weight:600;">Timely customer service</div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div style="background:#f5a300;">
+  <div class="wrap" style="padding-top:52px;padding-bottom:52px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;">
+    <h2 style="font-size:32px;max-width:640px;">Talk to us about your power protection requirement.</h2>
+    <a href="#" class="btn btn-ink">Contact Shivi</a>
+  </div>
+</div>
+
+<footer class="foot">
+  <div class="wrap" style="padding-top:64px;padding-bottom:40px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;">
+    <div>
+      <div class="mark" style="color:#fff;">SHIVI <small style="color:#8b91a3;">ELECTRONICS&nbsp;SYSTEM</small></div>
+      <p style="margin-top:16px;font-size:14px;max-width:300px;">Total power management &mdash; Online UPS, inverters, stabilizers and transformers engineered for critical loads.</p>
+      <p style="margin-top:18px;font-size:13px;color:#8b91a3;">[Unit address line], [City] &ndash; [PIN], [State], India</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;"><div class="eyebrow" style="color:#8b91a3;">Products</div>
+      <a href="#">Online UPS</a><a href="#">Inverters</a><a href="#">Stabilizers</a><a href="#">CVT &amp; Isolation</a><a href="#">Batteries</a></div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;"><div class="eyebrow" style="color:#8b91a3;">Company</div>
+      <a href="#">About</a><a href="#">Applications</a><a href="#">Services</a><a href="#">Blog</a><a href="#">Careers</a></div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;"><div class="eyebrow" style="color:#8b91a3;">Contact</div>
+      <a href="#">[+91 XXXXX XXXXX]</a><a href="#">[hello@shivielectronics.in]</a><a href="#">Service request</a><a href="#">Warranty registration</a></div>
+  </div>
+  <div style="border-top:1px solid #23293a;">
+    <div class="wrap" style="padding-top:20px;padding-bottom:24px;display:flex;justify-content:space-between;font-size:12px;color:#8b91a3;font-family:'IBM Plex Mono',monospace;flex-wrap:wrap;gap:8px;">
+      <span>&copy; 2026 SHIVI ELECTRONICS SYSTEM</span><span>CIN [&mdash;] &middot; IS 16242 / IEC 62040-1 &middot; ISO 9001 &middot; BIS</span>
+    </div>
+  </div>
+</footer>
+
+</x-dc>
+</body>
+</html>

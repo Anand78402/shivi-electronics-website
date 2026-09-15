@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+  <style>
+    *{box-sizing:border-box;}
+    body{margin:0;background:#ffffff;color:#0a0e1a;font-family:"IBM Plex Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+    h1,h2,h3{font-family:"Space Grotesk","Arial Black",system-ui,sans-serif;margin:0;line-height:1.04;letter-spacing:-0.02em;}
+    p{margin:0;line-height:1.55;}
+    a{color:#132a9e;text-decoration:none;}
+    a:hover{color:#1b3bd6;}
+    .eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#132a9e;}
+    .wrap{max-width:1440px;margin:0 auto;padding:0 100px;}
+    .btn{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 26px;font-weight:600;font-size:15px;border:2px solid #0a0e1a;cursor:pointer;font-family:inherit;}
+    .btn-amber{background:#f5a300;color:#0a0e1a;}
+    .btn-ink{background:#0a0e1a;color:#fff;}
+    .btn-ghost{background:transparent;color:#0a0e1a;}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:88px;border-bottom:2px solid #0a0e1a;}
+    .nav-links{display:flex;align-items:center;gap:26px;font-size:14px;font-weight:500;}
+    .nav-links a{color:#0a0e1a;}
+    .mark{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:22px;letter-spacing:-0.03em;display:flex;align-items:baseline;gap:8px;}
+    .mark small{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:0.2em;font-weight:500;color:#3a4256;}
+    .foot{background:#0a0e1a;color:#c7cbd6;}
+    .foot a{color:#c7cbd6;}
+    .foot a:hover{color:#f5a300;}
+    .card{border:2px solid #0a0e1a;padding:26px;background:#fff;display:flex;flex-direction:column;gap:12px;}
+  </style>
+</helmet>
+
+<div class="wrap">
+  <nav class="nav">
+    <div class="mark">SHIVI <small>ELECTRONICS&nbsp;SYSTEM</small></div>
+    <div class="nav-links">
+      <a href="#">Products</a><a href="#">Applications</a><a href="#">Services</a>
+      <a href="#">About</a><a href="#">Blog</a><a href="#">Contact</a>
+      <a href="#" class="btn btn-amber" style="height:44px;padding:0 18px;font-size:14px;">Get a quote</a>
+    </div>
+  </nav>
+</div>
+
+<!-- HERO -->
+<div class="wrap" style="padding-top:72px;padding-bottom:0;">
+  <div style="display:grid;grid-template-columns:1.15fr 0.85fr;gap:0;align-items:stretch;">
+    <div style="padding:8px 56px 72px 0;">
+      <div class="eyebrow">Total Power Management</div>
+      <h1 style="font-size:88px;margin-top:22px;">POWER,<br>UNINTERRUPTED.</h1>
+      <p style="margin-top:26px;max-width:460px;font-size:17px;color:#3a4256;">Online UPS systems, sine-wave inverters, servo stabilizers and transformers &mdash; engineered and built in India for printing, healthcare, industrial and IT loads that cannot afford a flicker.</p>
+      <div style="display:flex;gap:14px;margin-top:34px;">
+        <a href="#" class="btn btn-ink">Explore products</a>
+        <a href="#" class="btn btn-ghost">Talk to an engineer</a>
+      </div>
+    </div>
+    <div style="background:#132a9e;color:#fff;padding:40px;display:flex;flex-direction:column;justify-content:space-between;position:relative;margin-top:8px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+        <span class="eyebrow" style="color:#f5a300;">Online / Double&nbsp;Conversion</span>
+      </div>
+      <svg viewBox="0 0 400 160" width="100%" height="150" preserveAspectRatio="none" style="margin:24px 0;">
+        <path d="M0,80 C40,4 80,156 120,80 S200,4 240,80 S320,156 360,80 L400,80" fill="none" stroke="#f5a300" stroke-width="6"/>
+      </svg>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;border-top:1px solid #2c47c8;padding-top:24px;">
+        <div><div style="font-family:'Space Grotesk',sans-serif;font-size:34px;font-weight:700;">1&ndash;200</div><div style="font-size:12px;color:#aab6ee;">kVA capacity range</div></div>
+        <div><div style="font-family:'Space Grotesk',sans-serif;font-size:34px;font-weight:700;">&plusmn;1%</div><div style="font-size:12px;color:#aab6ee;">output regulation</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CAPABILITY STRIP -->
+<div style="background:#0a0e1a;color:#fff;margin-top:0;">
+  <div class="wrap" style="padding-top:22px;padding-bottom:22px;display:flex;flex-wrap:wrap;gap:14px 40px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#c7cbd6;">
+    <span>Double Conversion</span><span>Galvanic Isolation</span><span>N+1 Redundancy</span><span>SNMP Monitoring</span><span>Pure Sine Wave &middot; THD &lt;3%</span><span>Generator Compatible</span>
+  </div>
+</div>
+
+<!-- ABOUT TEASER -->
+<div class="wrap" style="padding-top:90px;padding-bottom:90px;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+    <div>
+      <div class="eyebrow">Who we are</div>
+      <h2 style="font-size:44px;margin-top:18px;">A technology-driven power electronics manufacturer</h2>
+      <p style="margin-top:20px;color:#3a4256;font-size:16px;">Shivi Electronics System is a single-source provider of Total Power Management &mdash; clean power delivery and continuous supply during outages. Built on a foundation of research and development and a customer-first philosophy, we integrate our systems into your existing setup to create seamless power connectivity.</p>
+      <a href="#" class="btn btn-ghost" style="margin-top:26px;">About Shivi &rarr;</a>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border:2px solid #0a0e1a;">
+      <div style="padding:28px;border-right:2px solid #0a0e1a;border-bottom:2px solid #0a0e1a;"><div style="font-family:'Space Grotesk',sans-serif;font-size:40px;font-weight:700;">20+</div><div style="font-size:13px;color:#3a4256;">years in power management</div></div>
+      <div style="padding:28px;border-bottom:2px solid #0a0e1a;"><div style="font-family:'Space Grotesk',sans-serif;font-size:40px;font-weight:700;">200<span style="font-size:20px;">kVA</span></div><div style="font-size:13px;color:#3a4256;">up to, Online UPS</div></div>
+      <div style="padding:28px;border-right:2px solid #0a0e1a;"><div style="font-family:'Space Grotesk',sans-serif;font-size:40px;font-weight:700;">9</div><div style="font-size:13px;color:#3a4256;">industry sectors served</div></div>
+      <div style="padding:28px;"><div style="font-family:'Space Grotesk',sans-serif;font-size:40px;font-weight:700;">AMC</div><div style="font-size:13px;color:#3a4256;">multi-brand service</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<div style="background:#eceef4;">
+  <div class="wrap" style="padding-top:80px;padding-bottom:80px;">
+    <div class="eyebrow">What we build</div>
+    <h2 style="font-size:44px;margin-top:16px;max-width:640px;">A complete range of power conditioning and backup systems</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:44px;">
+      <div class="card">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#132a9e" stroke-width="2"><rect x="3" y="4" width="18" height="16"/><path d="M8 9l4 6 4-6"/></svg>
+        <h3 style="font-size:21px;">Online UPS Systems</h3>
+        <p style="font-size:14px;color:#3a4256;">1&ndash;200 kVA, single &amp; three phase. Double-conversion topology with built-in galvanic isolation transformer.</p>
+        <a href="#" style="font-size:14px;font-weight:600;">View range &rarr;</a>
+      </div>
+      <div class="card">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#132a9e" stroke-width="2"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+        <h3 style="font-size:21px;">Sine Wave Inverters</h3>
+        <p style="font-size:14px;color:#3a4256;">800 VA&ndash;100 kVA &mdash; home, lift backup and industrial. IGBT PWM, high surge capability, noiseless operation.</p>
+        <a href="#" style="font-size:14px;font-weight:600;">View range &rarr;</a>
+      </div>
+      <div class="card">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#132a9e" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l6 3"/></svg>
+        <h3 style="font-size:21px;">Servo Voltage Stabilizers</h3>
+        <p style="font-size:14px;color:#3a4256;">Air-cooled 1&ndash;150 kVA, oil-cooled up to 1000 kVA. Synchronous stepper motor, &plusmn;1% output regulation.</p>
+        <a href="#" style="font-size:14px;font-weight:600;">View range &rarr;</a>
+      </div>
+      <div class="card">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#132a9e" stroke-width="2"><rect x="4" y="4" width="16" height="16"/><path d="M9 9h6v6H9z"/></svg>
+        <h3 style="font-size:21px;">CVT &amp; Isolation Transformers</h3>
+        <p style="font-size:14px;color:#3a4256;">Constant Voltage Transformers 500 VA&ndash;5 kVA and isolation transformers 1&ndash;500 kVA for noise-free power.</p>
+        <a href="#" style="font-size:14px;font-weight:600;">View range &rarr;</a>
+      </div>
+      <div class="card">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#132a9e" stroke-width="2"><rect x="3" y="7" width="16" height="10"/><path d="M19 10h2v4h-2M7 4v3M13 4v3"/></svg>
+        <h3 style="font-size:21px;">Batteries</h3>
+        <p style="font-size:14px;color:#3a4256;">Tubular batteries 150&ndash;220 Ah &mdash; supply, string design, DC cabling, load testing and scheduled replacement.</p>
+        <a href="#" style="font-size:14px;font-weight:600;">View range &rarr;</a>
+      </div>
+      <div class="card" style="background:#132a9e;color:#fff;border-color:#132a9e;justify-content:space-between;">
+        <h3 style="font-size:21px;color:#fff;">Not sure what you need?</h3>
+        <p style="font-size:14px;color:#c9d2f7;">Our engineers size the solution around your load, input quality, redundancy and future growth.</p>
+        <a href="#" style="font-size:14px;font-weight:600;color:#f5a300;">Request a site survey &rarr;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- UNIQUENESS -->
+<div class="wrap" style="padding-top:88px;padding-bottom:88px;">
+  <div class="eyebrow">Our uniqueness</div>
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:28px;border-top:2px solid #0a0e1a;">
+    <div style="padding:32px 28px 0 0;border-right:2px solid #0a0e1a;">
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;">Customised per application</div>
+      <p style="margin-top:12px;font-size:14px;color:#3a4256;">Input range, isolation, runtime and form factor built to the machine it protects &mdash; not a catalogue compromise.</p>
+    </div>
+    <div style="padding:32px 28px 0 28px;border-right:2px solid #0a0e1a;">
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;">Robust product quality</div>
+      <p style="margin-top:12px;font-size:14px;color:#3a4256;">Heavy-duty industrial construction, in-house testing, and dedicated R&amp;D and QC divisions behind every unit.</p>
+    </div>
+    <div style="padding:32px 0 0 28px;">
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;">Cost competitive</div>
+      <p style="margin-top:12px;font-size:14px;color:#3a4256;">Advanced technology at value prices, with delivery and service capability across India and overseas.</p>
+    </div>
+  </div>
+</div>
+
+<!-- APPLICATIONS -->
+<div style="background:#eceef4;">
+  <div class="wrap" style="padding-top:80px;padding-bottom:80px;">
+    <h2 style="font-size:40px;">Applications</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;">
+      <span style="border:2px solid #0a0e1a;padding:12px 18px;font-weight:600;font-size:14px;background:#fff;">Printing Industry</span>
+      <span style="border:2px solid #0a0e1a;padding:12px 18px;font-weight:600;font-size:14px;background:#fff;">Medical &amp; Healthcare</span>
+      <span style="border:2px solid #0a0e1a;padding:12px 18px;font-weight:600;font-size:14px;background:#fff;">Industrial Systems</span>
+      <span style="border:2px solid #0a0e1a;padding:12px 18px;font-weight:600;font-size:14px;background:#fff;">Retail</span>
+      <span style="border:2px solid #0a0e1a;padding:12px 18px;font-weight:600;font-size:14px;background:#fff;">Broadcasting</span>
+      <span style="border:2px solid #0a0e1a;padding:12px 18px;font-weight:600;font-size:14px;background:#fff;">IT Systems &amp; Networks</span>
+      <span style="border:2px solid #0a0e1a;padding:12px 18px;font-weight:600;font-size:14px;background:#fff;">Home / Small Office</span>
+      <span style="border:2px solid #0a0e1a;padding:12px 18px;font-weight:600;font-size:14px;background:#fff;">BFSI &amp; ATMs</span>
+      <span style="border:2px solid #0a0e1a;padding:12px 18px;font-weight:600;font-size:14px;background:#fff;">Telecommunications</span>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div style="background:#f5a300;">
+  <div class="wrap" style="padding-top:56px;padding-bottom:56px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;">
+    <h2 style="font-size:36px;max-width:640px;">Planning a power protection setup? Start with a load study.</h2>
+    <a href="#" class="btn btn-ink">Request a site survey</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap" style="padding-top:64px;padding-bottom:40px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;">
+    <div>
+      <div class="mark" style="color:#fff;">SHIVI <small style="color:#8b91a3;">ELECTRONICS&nbsp;SYSTEM</small></div>
+      <p style="margin-top:16px;font-size:14px;max-width:300px;">Total power management &mdash; Online UPS, inverters, stabilizers and transformers engineered for critical loads.</p>
+      <p style="margin-top:18px;font-size:13px;color:#8b91a3;">[Unit address line], [City] &ndash; [PIN], [State], India</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;">
+      <div class="eyebrow" style="color:#8b91a3;">Products</div>
+      <a href="#">Online UPS</a><a href="#">Inverters</a><a href="#">Stabilizers</a><a href="#">CVT &amp; Isolation</a><a href="#">Batteries</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;">
+      <div class="eyebrow" style="color:#8b91a3;">Company</div>
+      <a href="#">About</a><a href="#">Applications</a><a href="#">Services</a><a href="#">Blog</a><a href="#">Careers</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;">
+      <div class="eyebrow" style="color:#8b91a3;">Contact</div>
+      <a href="#">[+91 XXXXX XXXXX]</a><a href="#">[hello@shivielectronics.in]</a><a href="#">Service request</a><a href="#">Warranty registration</a>
+    </div>
+  </div>
+  <div style="border-top:1px solid #23293a;">
+    <div class="wrap" style="padding-top:20px;padding-bottom:24px;display:flex;justify-content:space-between;font-size:12px;color:#8b91a3;font-family:'IBM Plex Mono',monospace;flex-wrap:wrap;gap:8px;">
+      <span>&copy; 2026 SHIVI ELECTRONICS SYSTEM</span><span>CIN [&mdash;] &middot; IS 16242 / IEC 62040-1 &middot; ISO 9001 &middot; BIS</span>
+    </div>
+  </div>
+</footer>
+
+</x-dc>
+</body>
+</html>

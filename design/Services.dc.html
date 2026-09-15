@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+  <style>
+    *{box-sizing:border-box;}
+    body{margin:0;background:#ffffff;color:#0a0e1a;font-family:"IBM Plex Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+    h1,h2,h3{font-family:"Space Grotesk","Arial Black",system-ui,sans-serif;margin:0;line-height:1.04;letter-spacing:-0.02em;}
+    p{margin:0;line-height:1.55;}
+    a{color:#132a9e;text-decoration:none;} a:hover{color:#1b3bd6;}
+    .eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#132a9e;}
+    .wrap{max-width:1440px;margin:0 auto;padding:0 100px;}
+    .btn{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 26px;font-weight:600;font-size:15px;border:2px solid #0a0e1a;cursor:pointer;font-family:inherit;}
+    .btn-amber{background:#f5a300;color:#0a0e1a;} .btn-ink{background:#0a0e1a;color:#fff;}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:88px;border-bottom:2px solid #0a0e1a;}
+    .nav-links{display:flex;align-items:center;gap:26px;font-size:14px;font-weight:500;} .nav-links a{color:#0a0e1a;}
+    .mark{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:22px;letter-spacing:-0.03em;display:flex;align-items:baseline;gap:8px;}
+    .mark small{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:0.2em;font-weight:500;color:#3a4256;}
+    .foot{background:#0a0e1a;color:#c7cbd6;} .foot a{color:#c7cbd6;} .foot a:hover{color:#f5a300;}
+    .crumb{font-family:"IBM Plex Mono",monospace;font-size:12px;color:#6b7288;letter-spacing:0.06em;}
+    .scard{border:2px solid #0a0e1a;padding:26px;background:#fff;display:flex;flex-direction:column;gap:12px;}
+    .scard h3{font-size:20px;}
+    .scard p{font-size:13.5px;color:#3a4256;}
+    .drow{border-top:1px solid #d3d7e0;padding:22px 0;display:grid;grid-template-columns:0.6fr 1.4fr;gap:32px;}
+    .drow h3{font-size:18px;}
+    .drow p{font-size:14px;color:#3a4256;}
+  </style>
+</helmet>
+
+<div class="wrap">
+  <nav class="nav">
+    <div class="mark">SHIVI <small>ELECTRONICS&nbsp;SYSTEM</small></div>
+    <div class="nav-links">
+      <a href="#">Products</a><a href="#">Applications</a><a href="#" style="color:#132a9e;">Services</a>
+      <a href="#">About</a><a href="#">Blog</a><a href="#">Contact</a>
+      <a href="#" class="btn btn-amber" style="height:44px;padding:0 18px;font-size:14px;">Get a quote</a>
+    </div>
+  </nav>
+</div>
+
+<div class="wrap" style="padding-top:56px;padding-bottom:44px;">
+  <div class="crumb">Home / Services</div>
+  <h1 style="font-size:68px;margin-top:16px;">Services</h1>
+  <p style="margin-top:20px;max-width:700px;font-size:17px;color:#3a4256;">The highest standard of support, training, equipment and professional expertise &mdash; delivered by field-based engineers and technical support staff committed to your power protection systems.</p>
+</div>
+
+<div class="wrap" style="padding-bottom:64px;">
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;">
+    <article class="scard"><div class="eyebrow">01</div><h3>Consulting</h3><p>Pre-sales consultancy to plan your power protection requirement &mdash; load, input quality, harmonic control, redundancy, safety, space, cooling, maintenance access and future scalability.</p></article>
+    <article class="scard"><div class="eyebrow">02</div><h3>Product Customization</h3><p>Input range, isolation, runtime and form factor built to your specification &mdash; for new or existing setups, with earthing, cabling and electrical guidance.</p></article>
+    <article class="scard"><div class="eyebrow">03</div><h3>Request a Site Survey</h3><p>On-site study of load and installation conditions so the solution is sized to the room, not a datasheet.</p></article>
+    <article class="scard"><div class="eyebrow">04</div><h3>UPS &amp; Inverter Service</h3><p>Installation &amp; commissioning, training, and warranty support &mdash; module-based servicing with logistics for emergency and routine visits.</p></article>
+    <article class="scard"><div class="eyebrow">05</div><h3>AMC Services</h3><p>Comprehensive coverage for all parts and labour against breakdown, plus preventive maintenance for low downtime &mdash; including AMC of multi-brand UPS systems.</p></article>
+    <article class="scard"><div class="eyebrow">06</div><h3>Battery Services</h3><p>Installation to manufacturer spec, preventive and corrective maintenance, impedance and load testing, thermal imaging, and scheduled replacement with responsible disposal.</p></article>
+  </div>
+</div>
+
+<div style="background:#eceef4;">
+  <div class="wrap" style="padding-top:64px;padding-bottom:64px;">
+    <div class="eyebrow">What's included</div>
+    <div style="margin-top:20px;">
+      <div class="drow"><h3>Installation &amp; Commissioning</h3><p>We coordinate the logistics of your installation from on-site delivery through scheduling, commissioning and optimal configuration of your power protection equipment.</p></div>
+      <div class="drow"><h3>Training</h3><p>Product training on commissioning and start-up sequence, usage, maintenance, troubleshooting and preventive measures.</p></div>
+      <div class="drow"><h3>Warranty Support</h3><p>Module-based servicing against manufacturing defects, with service centres equipped for emergency and routine work.</p></div>
+      <div class="drow"><h3>Annual Maintenance Contract</h3><p>Predictive failure avoidance and preventive maintenance for super-critical environments, with breakdown-maintenance insurance covering parts and labour.</p></div>
+      <div class="drow"><h3>Multi-brand AMC</h3><p>One comprehensive maintenance and support contract covering almost every type of UPS system &mdash; simplified management, one number to call.</p></div>
+      <div class="drow"><h3>Ad-hoc Maintenance &amp; Repair</h3><p>On-site and depot repair for systems not under contract, by factory-trained field-service engineers using current tools and electrical codes.</p></div>
+      <div class="drow" style="border-bottom:1px solid #d3d7e0;"><h3>Upgradation of Existing UPS</h3><p>Exchange third-party UPS for Shivi units to move to better technology or scale to higher power ratings.</p></div>
+    </div>
+  </div>
+</div>
+
+<div style="background:#f5a300;">
+  <div class="wrap" style="padding-top:52px;padding-bottom:52px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;">
+    <h2 style="font-size:32px;max-width:640px;">Existing UPS out of warranty? Ask about an AMC.</h2>
+    <a href="#" class="btn btn-ink">Contact service team</a>
+  </div>
+</div>
+
+<footer class="foot">
+  <div class="wrap" style="padding-top:64px;padding-bottom:40px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;">
+    <div>
+      <div class="mark" style="color:#fff;">SHIVI <small style="color:#8b91a3;">ELECTRONICS&nbsp;SYSTEM</small></div>
+      <p style="margin-top:16px;font-size:14px;max-width:300px;">Total power management &mdash; Online UPS, inverters, stabilizers and transformers engineered for critical loads.</p>
+      <p style="margin-top:18px;font-size:13px;color:#8b91a3;">[Unit address line], [City] &ndash; [PIN], [State], India</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;"><div class="eyebrow" style="color:#8b91a3;">Products</div>
+      <a href="#">Online UPS</a><a href="#">Inverters</a><a href="#">Stabilizers</a><a href="#">CVT &amp; Isolation</a><a href="#">Batteries</a></div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;"><div class="eyebrow" style="color:#8b91a3;">Company</div>
+      <a href="#">About</a><a href="#">Applications</a><a href="#">Services</a><a href="#">Blog</a><a href="#">Careers</a></div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;"><div class="eyebrow" style="color:#8b91a3;">Contact</div>
+      <a href="#">[+91 XXXXX XXXXX]</a><a href="#">[hello@shivielectronics.in]</a><a href="#">Service request</a><a href="#">Warranty registration</a></div>
+  </div>
+  <div style="border-top:1px solid #23293a;">
+    <div class="wrap" style="padding-top:20px;padding-bottom:24px;display:flex;justify-content:space-between;font-size:12px;color:#8b91a3;font-family:'IBM Plex Mono',monospace;flex-wrap:wrap;gap:8px;">
+      <span>&copy; 2026 SHIVI ELECTRONICS SYSTEM</span><span>CIN [&mdash;] &middot; IS 16242 / IEC 62040-1 &middot; ISO 9001 &middot; BIS</span>
+    </div>
+  </div>
+</footer>
+
+</x-dc>
+</body>
+</html>

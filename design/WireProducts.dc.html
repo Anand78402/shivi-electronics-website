@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=IBM+Plex+Sans:wght@400;600&display=swap">
+  <style>
+    *{box-sizing:border-box;}
+    body{margin:0;background:#ffffff;color:#1a1a1a;font-family:"IBM Plex Sans",system-ui,sans-serif;}
+    h1,h2,h3{font-family:"Kalam","Comic Sans MS",cursive;margin:0;font-weight:700;line-height:1.15;}
+    p{margin:0;line-height:1.5;font-size:12px;color:#4a4a4a;}
+    .w{max-width:1240px;margin:0 auto;padding:0 48px;}
+    .lbl{font-family:"Kalam",cursive;font-size:12px;color:#8a8a8a;text-transform:uppercase;letter-spacing:0.1em;}
+    .box{border:1.5px dashed #9a9a9a;background:#f2f2f2;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#6a6a6a;font-family:"Kalam",cursive;font-size:13px;text-align:center;padding:12px;}
+    .card{border:1.5px solid #1a1a1a;border-radius:4px;padding:14px;display:flex;flex-direction:column;gap:8px;}
+    .btn{border:1.5px solid #1a1a1a;border-radius:4px;padding:8px 12px;font-size:12px;background:#1a1a1a;color:#fff;font-family:"Kalam",cursive;display:inline-flex;align-items:center;justify-content:center;}
+    .btn.o{background:#fff;color:#1a1a1a;}
+    .row{display:flex;gap:10px;}
+    .hdr{display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid #1a1a1a;padding:14px 0;}
+    .sec{border-top:1px dashed #c4c4c4;padding:24px 0;}
+    .note{font-family:"Kalam",cursive;font-size:11px;color:#b06a00;}
+  </style>
+</helmet>
+
+<div class="w">
+  <div class="hdr">
+    <div class="box" style="width:150px;height:34px;">LOGO</div>
+    <div class="row" style="font-family:'Kalam',cursive;font-size:13px;align-items:center;">
+      <span>Products</span><span>Solutions</span><span>Service</span><span>Resources</span><span>About</span>
+      <span style="font-weight:700;">24&times;7&nbsp;[phone]</span><span class="btn">Get a quote</span>
+    </div>
+  </div>
+
+  <div class="sec" style="border-top:none;">
+    <div class="lbl">Breadcrumb — Home / Products</div>
+    <h1 style="font-size:34px;margin-top:6px;">Products</h1>
+    <p style="margin-top:8px;max-width:560px;font-size:13px;">Intro line: full range for clean power delivery and continuous supply. Filter, or use "Find your UPS".</p>
+  </div>
+
+  <div class="sec" style="display:grid;grid-template-columns:230px 1fr;gap:24px;">
+    <!-- FILTER RAIL -->
+    <div>
+      <div class="lbl">Filters</div>
+      <div class="box" style="height:40px;margin-top:10px;">Category (checkboxes)</div>
+      <div class="box" style="height:40px;margin-top:8px;">Phase — 1&phi; / 3&phi;</div>
+      <div class="box" style="height:40px;margin-top:8px;">Capacity range slider</div>
+      <div class="box" style="height:40px;margin-top:8px;">Topology / cooling</div>
+      <div class="box" style="height:40px;margin-top:8px;">Application</div>
+      <span class="btn o" style="margin-top:10px;">Reset</span>
+    </div>
+
+    <!-- RESULTS -->
+    <div>
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <span class="lbl">15 results &middot; sort: capacity</span>
+        <span class="lbl">grid / list toggle</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:12px;">
+        <div class="card"><div class="box" style="height:80px;">product photo</div><h3 style="font-size:14px;">Product name</h3><p>Range · phase · 2 key specs</p><div class="row"><span class="btn o" style="font-size:10px;">Datasheet</span><span class="btn" style="font-size:10px;">RFQ</span></div></div>
+        <div class="card"><div class="box" style="height:80px;">product photo</div><h3 style="font-size:14px;">Product name</h3><p>Range · phase · 2 key specs</p><div class="row"><span class="btn o" style="font-size:10px;">Datasheet</span><span class="btn" style="font-size:10px;">RFQ</span></div></div>
+        <div class="card"><div class="box" style="height:80px;">product photo</div><h3 style="font-size:14px;">Product name</h3><p>Range · phase · 2 key specs</p><div class="row"><span class="btn o" style="font-size:10px;">Datasheet</span><span class="btn" style="font-size:10px;">RFQ</span></div></div>
+        <div class="card"><div class="box" style="height:80px;">product photo</div><h3 style="font-size:14px;">Product name</h3><p>Range · phase · 2 key specs</p><div class="row"><span class="btn o" style="font-size:10px;">Datasheet</span><span class="btn" style="font-size:10px;">RFQ</span></div></div>
+        <div class="card"><div class="box" style="height:80px;">product photo</div><h3 style="font-size:14px;">Product name</h3><p>Range · phase · 2 key specs</p><div class="row"><span class="btn o" style="font-size:10px;">Datasheet</span><span class="btn" style="font-size:10px;">RFQ</span></div></div>
+        <div class="card"><div class="box" style="height:80px;">product photo</div><h3 style="font-size:14px;">Product name</h3><p>Range · phase · 2 key specs</p><div class="row"><span class="btn o" style="font-size:10px;">Datasheet</span><span class="btn" style="font-size:10px;">RFQ</span></div></div>
+      </div>
+      <div class="box" style="height:36px;margin-top:14px;">pagination / load more</div>
+    </div>
+  </div>
+
+  <div class="sec" style="background:#1a1a1a;color:#fff;border-radius:4px;padding:20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+    <h3 style="font-size:16px;color:#fff;">Not sure which model?</h3>
+    <div class="box" style="flex:1;min-width:200px;height:40px;background:#333;border-color:#666;color:#ccc;">Find your UPS — selector</div>
+    <span class="btn o">Talk to an engineer</span>
+  </div>
+
+  <div class="sec" style="border-top:2px solid #1a1a1a;"><span class="lbl">Footer (same as Home)</span></div>
+  <p class="note" style="padding:14px 0 40px;">Wireframe — filter rail + result cards with dual CTA (Datasheet / RFQ). Real specs from Product Catlog.</p>
+</div>
+
+</x-dc>
+</body>
+</html>

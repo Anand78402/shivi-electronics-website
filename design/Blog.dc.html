@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+  <style>
+    *{box-sizing:border-box;}
+    body{margin:0;background:#ffffff;color:#0a0e1a;font-family:"IBM Plex Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+    h1,h2,h3{font-family:"Space Grotesk","Arial Black",system-ui,sans-serif;margin:0;line-height:1.04;letter-spacing:-0.02em;}
+    p{margin:0;line-height:1.55;}
+    a{color:#132a9e;text-decoration:none;} a:hover{color:#1b3bd6;}
+    .eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#132a9e;}
+    .wrap{max-width:1440px;margin:0 auto;padding:0 100px;}
+    .btn{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 26px;font-weight:600;font-size:15px;border:2px solid #0a0e1a;cursor:pointer;font-family:inherit;}
+    .btn-amber{background:#f5a300;color:#0a0e1a;} .btn-ink{background:#0a0e1a;color:#fff;}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:88px;border-bottom:2px solid #0a0e1a;}
+    .nav-links{display:flex;align-items:center;gap:26px;font-size:14px;font-weight:500;} .nav-links a{color:#0a0e1a;}
+    .mark{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:22px;letter-spacing:-0.03em;display:flex;align-items:baseline;gap:8px;}
+    .mark small{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:0.2em;font-weight:500;color:#3a4256;}
+    .foot{background:#0a0e1a;color:#c7cbd6;} .foot a{color:#c7cbd6;} .foot a:hover{color:#f5a300;}
+    .crumb{font-family:"IBM Plex Mono",monospace;font-size:12px;color:#6b7288;letter-spacing:0.06em;}
+    .post{border-top:2px solid #0a0e1a;padding:28px 0;display:grid;grid-template-columns:0.9fr 1.1fr;gap:40px;align-items:start;}
+    .post h3{font-size:26px;}
+    .post p{font-size:14px;color:#3a4256;margin-top:12px;}
+  </style>
+</helmet>
+
+<div class="wrap">
+  <nav class="nav">
+    <div class="mark">SHIVI <small>ELECTRONICS&nbsp;SYSTEM</small></div>
+    <div class="nav-links">
+      <a href="#">Products</a><a href="#">Applications</a><a href="#">Services</a>
+      <a href="#">About</a><a href="#" style="color:#132a9e;">Blog</a><a href="#">Contact</a>
+      <a href="#" class="btn btn-amber" style="height:44px;padding:0 18px;font-size:14px;">Get a quote</a>
+    </div>
+  </nav>
+</div>
+
+<div class="wrap" style="padding-top:56px;padding-bottom:44px;">
+  <div class="crumb">Home / Blog</div>
+  <h1 style="font-size:68px;margin-top:16px;">Blog</h1>
+  <p style="margin-top:20px;max-width:620px;font-size:17px;color:#3a4256;">Notes on power quality, backup topology and keeping critical loads running.</p>
+</div>
+
+<!-- FEATURED -->
+<div class="wrap" style="padding-bottom:24px;">
+  <div style="border:2px solid #0a0e1a;display:grid;grid-template-columns:1fr 1fr;">
+    <div style="background:#132a9e;min-height:280px;display:flex;align-items:center;justify-content:center;">
+      <svg width="70%" height="120" viewBox="0 0 300 120" preserveAspectRatio="none"><path d="M0 60 C40 0 70 120 110 60 S180 0 220 60 S290 120 300 60" fill="none" stroke="#f5a300" stroke-width="6"/></svg>
+    </div>
+    <div style="padding:40px;display:flex;flex-direction:column;justify-content:center;">
+      <div class="eyebrow">Featured</div>
+      <h2 style="font-size:34px;margin-top:14px;">A journey from firelight to Online UPS</h2>
+      <p style="margin-top:16px;font-size:15px;color:#3a4256;">We have come a long way from firelight to online UPS. There was a time when electricity was a dream for everyone &mdash; a look at how backup power evolved into today's double-conversion systems.</p>
+      <a href="#" class="btn btn-ink" style="margin-top:24px;align-self:flex-start;">Read article</a>
+    </div>
+  </div>
+</div>
+
+<!-- LIST -->
+<div class="wrap" style="padding-top:40px;padding-bottom:72px;">
+  <article class="post">
+    <div>
+      <div class="eyebrow">Power quality</div>
+      <a href="#" style="font-size:13px;font-weight:600;margin-top:auto;">Read &rarr;</a>
+    </div>
+    <div>
+      <h3>Constant Voltage Transformer protects your appliances!</h3>
+      <p>A CVT ensures regulated power supply to all electronic appliances. It maintains a steady flow of energy irrespective of input variation &mdash; ferro-resonant regulation with no moving parts.</p>
+    </div>
+  </article>
+  <article class="post">
+    <div>
+      <div class="eyebrow">Backup power</div>
+      <a href="#" style="font-size:13px;font-weight:600;">Read &rarr;</a>
+    </div>
+    <div>
+      <h3>Backup Power Inverter</h3>
+      <p>While enjoying time with family, a power failure is an unwelcome interruption. This is where a sine-wave power inverter keeps essential loads running without a break.</p>
+    </div>
+  </article>
+  <article class="post" style="border-bottom:2px solid #0a0e1a;">
+    <div>
+      <div class="eyebrow">Guide</div>
+      <a href="#" style="font-size:13px;font-weight:600;">Read &rarr;</a>
+    </div>
+    <div>
+      <h3>Nine power problems every critical site should plan for</h3>
+      <p>Power failure, sag, surge, over- and under-voltage, line noise, frequency variation, switching transients and harmonic distortion &mdash; what each does and how to shield against it.</p>
+    </div>
+  </article>
+</div>
+
+<div style="background:#f5a300;">
+  <div class="wrap" style="padding-top:52px;padding-bottom:52px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;">
+    <h2 style="font-size:32px;max-width:640px;">Have a power quality question? Ask our engineers.</h2>
+    <a href="#" class="btn btn-ink">Contact Shivi</a>
+  </div>
+</div>
+
+<footer class="foot">
+  <div class="wrap" style="padding-top:64px;padding-bottom:40px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;">
+    <div>
+      <div class="mark" style="color:#fff;">SHIVI <small style="color:#8b91a3;">ELECTRONICS&nbsp;SYSTEM</small></div>
+      <p style="margin-top:16px;font-size:14px;max-width:300px;">Total power management &mdash; Online UPS, inverters, stabilizers and transformers engineered for critical loads.</p>
+      <p style="margin-top:18px;font-size:13px;color:#8b91a3;">[Unit address line], [City] &ndash; [PIN], [State], India</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;"><div class="eyebrow" style="color:#8b91a3;">Products</div>
+      <a href="#">Online UPS</a><a href="#">Inverters</a><a href="#">Stabilizers</a><a href="#">CVT &amp; Isolation</a><a href="#">Batteries</a></div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;"><div class="eyebrow" style="color:#8b91a3;">Company</div>
+      <a href="#">About</a><a href="#">Applications</a><a href="#">Services</a><a href="#">Blog</a><a href="#">Careers</a></div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;"><div class="eyebrow" style="color:#8b91a3;">Contact</div>
+      <a href="#">[+91 XXXXX XXXXX]</a><a href="#">[hello@shivielectronics.in]</a><a href="#">Service request</a><a href="#">Warranty registration</a></div>
+  </div>
+  <div style="border-top:1px solid #23293a;">
+    <div class="wrap" style="padding-top:20px;padding-bottom:24px;display:flex;justify-content:space-between;font-size:12px;color:#8b91a3;font-family:'IBM Plex Mono',monospace;flex-wrap:wrap;gap:8px;">
+      <span>&copy; 2026 SHIVI ELECTRONICS SYSTEM</span><span>CIN [&mdash;] &middot; IS 16242 / IEC 62040-1 &middot; ISO 9001 &middot; BIS</span>
+    </div>
+  </div>
+</footer>
+
+</x-dc>
+</body>
+</html>

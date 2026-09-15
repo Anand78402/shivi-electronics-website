@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=IBM+Plex+Sans:wght@400;600&display=swap">
+  <style>
+    *{box-sizing:border-box;}
+    body{margin:0;background:#ffffff;color:#1a1a1a;font-family:"IBM Plex Sans",system-ui,sans-serif;}
+    h1,h2,h3{font-family:"Kalam","Comic Sans MS",cursive;margin:0;font-weight:700;line-height:1.15;}
+    p{margin:0;line-height:1.5;font-size:12px;color:#4a4a4a;}
+    .w{max-width:1240px;margin:0 auto;padding:0 48px;}
+    .lbl{font-family:"Kalam",cursive;font-size:12px;color:#8a8a8a;text-transform:uppercase;letter-spacing:0.1em;}
+    .box{border:1.5px dashed #9a9a9a;background:#f2f2f2;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#6a6a6a;font-family:"Kalam",cursive;font-size:13px;text-align:center;padding:12px;}
+    .fld{border:1.5px solid #1a1a1a;border-radius:4px;height:38px;display:flex;align-items:center;padding:0 10px;font-family:"Kalam",cursive;font-size:12px;color:#8a8a8a;}
+    .btn{border:1.5px solid #1a1a1a;border-radius:4px;padding:9px 14px;font-size:12px;background:#1a1a1a;color:#fff;font-family:"Kalam",cursive;display:inline-flex;align-items:center;justify-content:center;}
+    .row{display:flex;gap:12px;flex-wrap:wrap;}
+    .hdr{display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid #1a1a1a;padding:14px 0;}
+    .sec{border-top:1px dashed #c4c4c4;padding:24px 0;}
+    .note{font-family:"Kalam",cursive;font-size:11px;color:#b06a00;}
+  </style>
+</helmet>
+
+<div class="w">
+  <div class="hdr">
+    <div class="box" style="width:150px;height:34px;">LOGO</div>
+    <div class="row" style="font-family:'Kalam',cursive;font-size:13px;align-items:center;">
+      <span>Products</span><span>Solutions</span><span>Service</span><span>Resources</span><span>About</span>
+      <span style="font-weight:700;">24&times;7&nbsp;[phone]</span><span class="btn">Get a quote</span>
+    </div>
+  </div>
+
+  <div class="sec" style="border-top:none;">
+    <div class="lbl">Breadcrumb — Home / Contact</div>
+    <h1 style="font-size:32px;margin-top:6px;">Request a quote</h1>
+    <p style="margin-top:8px;max-width:520px;">Tell us the load; we return a sized configuration and budgetary quote. Breakdown? Use the 24×7 service line.</p>
+  </div>
+
+  <div class="sec" style="display:grid;grid-template-columns:1.15fr 0.85fr;gap:28px;">
+    <!-- FORM -->
+    <div>
+      <div class="lbl">RFQ form</div>
+      <div class="row" style="margin-top:10px;">
+        <div class="fld" style="flex:1;">Name *</div><div class="fld" style="flex:1;">Company *</div>
+      </div>
+      <div class="row" style="margin-top:8px;">
+        <div class="fld" style="flex:1;">Role (engineer / procurement / owner)</div><div class="fld" style="flex:1;">City *</div>
+      </div>
+      <div class="row" style="margin-top:8px;">
+        <div class="fld" style="flex:1;">Email *</div><div class="fld" style="flex:1;">Phone *</div>
+      </div>
+      <div class="row" style="margin-top:8px;">
+        <div class="fld" style="flex:1;">Product interest (multi-select)</div><div class="fld" style="flex:1;">Capacity needed (kVA)</div>
+      </div>
+      <div class="box" style="height:70px;margin-top:8px;">Load details / notes — free text</div>
+      <div class="box" style="height:44px;margin-top:8px;border-style:dashed;">Attach load schedule (optional upload)</div>
+      <div class="row" style="margin-top:10px;align-items:center;">
+        <span class="btn">Submit request</span>
+        <span style="font-family:'Kalam',cursive;font-size:11px;color:#8a8a8a;">privacy line · typical reply time</span>
+      </div>
+    </div>
+
+    <!-- DETAILS -->
+    <div>
+      <div class="lbl">Direct</div>
+      <div class="box" style="height:56px;margin-top:10px;">24×7 service line (orange) — click-to-call</div>
+      <div class="box" style="height:56px;margin-top:8px;">Sales line — office hours</div>
+      <div class="box" style="height:56px;margin-top:8px;">Email · GST / vendor-registration docs</div>
+      <div class="box" style="height:120px;margin-top:8px;">Registered office + works address<br>+ embedded map</div>
+    </div>
+  </div>
+
+  <div class="sec" style="border-top:2px solid #1a1a1a;"><span class="lbl">Footer (same as Home)</span></div>
+  <p class="note" style="padding:14px 0 40px;">Wireframe — RFQ captures role + capacity + load schedule so sales can respond with a real quote, not a callback.</p>
+</div>
+
+</x-dc>
+</body>
+</html>

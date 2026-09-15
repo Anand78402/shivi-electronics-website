@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+  <style>
+    *{box-sizing:border-box;}
+    body{margin:0;background:#ffffff;color:#0a0e1a;font-family:"IBM Plex Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+    h1,h2,h3{font-family:"Space Grotesk","Arial Black",system-ui,sans-serif;margin:0;line-height:1.04;letter-spacing:-0.02em;}
+    p{margin:0;line-height:1.55;}
+    a{color:#132a9e;text-decoration:none;} a:hover{color:#1b3bd6;}
+    .eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#132a9e;}
+    .wrap{max-width:1440px;margin:0 auto;padding:0 100px;}
+    .btn{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 26px;font-weight:600;font-size:15px;border:2px solid #0a0e1a;cursor:pointer;font-family:inherit;}
+    .btn-amber{background:#f5a300;color:#0a0e1a;} .btn-ink{background:#0a0e1a;color:#fff;}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:88px;border-bottom:2px solid #0a0e1a;}
+    .nav-links{display:flex;align-items:center;gap:26px;font-size:14px;font-weight:500;} .nav-links a{color:#0a0e1a;}
+    .mark{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:22px;letter-spacing:-0.03em;display:flex;align-items:baseline;gap:8px;}
+    .mark small{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:0.2em;font-weight:500;color:#3a4256;}
+    .foot{background:#0a0e1a;color:#c7cbd6;} .foot a{color:#c7cbd6;} .foot a:hover{color:#f5a300;}
+    .crumb{font-family:"IBM Plex Mono",monospace;font-size:12px;color:#6b7288;letter-spacing:0.06em;}
+    .fld{display:flex;flex-direction:column;gap:6px;}
+    .fld label{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#3a4256;}
+    .fld input,.fld select,.fld textarea{border:2px solid #0a0e1a;padding:12px 14px;font-family:inherit;font-size:14px;background:#fff;color:#0a0e1a;}
+    .fld textarea{min-height:96px;resize:vertical;}
+  </style>
+</helmet>
+
+<div class="wrap">
+  <nav class="nav">
+    <div class="mark">SHIVI <small>ELECTRONICS&nbsp;SYSTEM</small></div>
+    <div class="nav-links">
+      <a href="#">Products</a><a href="#">Applications</a><a href="#">Services</a>
+      <a href="#">About</a><a href="#">Blog</a><a href="#" style="color:#132a9e;">Contact</a>
+      <a href="#" class="btn btn-amber" style="height:44px;padding:0 18px;font-size:14px;">Get a quote</a>
+    </div>
+  </nav>
+</div>
+
+<div class="wrap" style="padding-top:56px;padding-bottom:44px;">
+  <div class="crumb">Home / Contact Us</div>
+  <h1 style="font-size:68px;margin-top:16px;">Get in touch</h1>
+  <p style="margin-top:20px;max-width:620px;font-size:17px;color:#3a4256;">Tell us about your load and we'll come back with a sized solution. For breakdowns, use the 24-hour service line.</p>
+</div>
+
+<div class="wrap" style="padding-bottom:72px;">
+  <div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:0;border:2px solid #0a0e1a;">
+
+    <!-- FORM -->
+    <div style="padding:40px;border-right:2px solid #0a0e1a;">
+      <h2 style="font-size:24px;">Send an enquiry</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px;">
+        <div class="fld"><label>Your name *</label><input type="text" placeholder="Full name"></div>
+        <div class="fld"><label>Your email *</label><input type="email" placeholder="you@company.com"></div>
+        <div class="fld"><label>Mobile *</label><input type="tel" placeholder="+91"></div>
+        <div class="fld"><label>City</label><input type="text" placeholder="City"></div>
+        <div class="fld"><label>Interested in *</label>
+          <select><option value="" selected>Select&hellip;</option><option>Online UPS</option><option>Servo Stabilizer</option><option>Inverter</option><option>Batteries</option><option>Isolation Transformer</option><option>Other</option></select>
+        </div>
+        <div class="fld"><label>How did you hear? *</label>
+          <select><option value="" selected>Select&hellip;</option><option>Google</option><option>LinkedIn</option><option>Referred</option><option>YouTube</option><option>Other</option></select>
+        </div>
+        <div class="fld" style="grid-column:1 / -1;"><label>Comments</label><textarea placeholder="Load type, capacity, site conditions&hellip;"></textarea></div>
+      </div>
+      <button class="btn btn-amber" style="margin-top:24px;">Submit enquiry</button>
+    </div>
+
+    <!-- DETAILS -->
+    <div style="padding:40px;display:flex;flex-direction:column;gap:28px;background:#eceef4;">
+      <div>
+        <div class="eyebrow">Visit us</div>
+        <p style="margin-top:10px;font-size:15px;color:#25304a;">[Unit address line 1]<br>[Unit address line 2]<br>[City] &ndash; [PIN], [State], India</p>
+      </div>
+      <div>
+        <div class="eyebrow">Call</div>
+        <p style="margin-top:10px;font-size:15px;color:#25304a;">[+91 XXXXX XXXX1] &mdash; 24 hours<br>[+91 XXXXX XXXX2] &mdash; 10:00 AM to 6:00 PM</p>
+      </div>
+      <div>
+        <div class="eyebrow">Email</div>
+        <p style="margin-top:10px;font-size:15px;color:#25304a;">[hello@shivielectronics.in]</p>
+      </div>
+      <div style="flex-grow:1;border:2px solid #0a0e1a;background:#fff;min-height:160px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
+        <svg width="100%" height="100%" viewBox="0 0 300 180" preserveAspectRatio="none" style="position:absolute;inset:0;">
+          <rect width="300" height="180" fill="#f6f7fa"/>
+          <path d="M0 40 H300 M0 90 H300 M0 140 H300 M60 0 V180 M140 0 V180 M220 0 V180" stroke="#d3d7e0" stroke-width="1"/>
+          <path d="M20 160 L120 60 L180 100 L280 30" stroke="#132a9e" stroke-width="3" fill="none"/>
+          <circle cx="180" cy="100" r="7" fill="#f5a300" stroke="#0a0e1a" stroke-width="2"/>
+        </svg>
+        <span style="position:relative;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:#6b7288;background:#fff;padding:4px 8px;border:1px solid #0a0e1a;">MAP &mdash; embed pin</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="foot">
+  <div class="wrap" style="padding-top:64px;padding-bottom:40px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;">
+    <div>
+      <div class="mark" style="color:#fff;">SHIVI <small style="color:#8b91a3;">ELECTRONICS&nbsp;SYSTEM</small></div>
+      <p style="margin-top:16px;font-size:14px;max-width:300px;">Total power management &mdash; Online UPS, inverters, stabilizers and transformers engineered for critical loads.</p>
+      <p style="margin-top:18px;font-size:13px;color:#8b91a3;">[Unit address line], [City] &ndash; [PIN], [State], India</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;"><div class="eyebrow" style="color:#8b91a3;">Products</div>
+      <a href="#">Online UPS</a><a href="#">Inverters</a><a href="#">Stabilizers</a><a href="#">CVT &amp; Isolation</a><a href="#">Batteries</a></div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;"><div class="eyebrow" style="color:#8b91a3;">Company</div>
+      <a href="#">About</a><a href="#">Applications</a><a href="#">Services</a><a href="#">Blog</a><a href="#">Careers</a></div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;"><div class="eyebrow" style="color:#8b91a3;">Contact</div>
+      <a href="#">[+91 XXXXX XXXXX]</a><a href="#">[hello@shivielectronics.in]</a><a href="#">Service request</a><a href="#">Warranty registration</a></div>
+  </div>
+  <div style="border-top:1px solid #23293a;">
+    <div class="wrap" style="padding-top:20px;padding-bottom:24px;display:flex;justify-content:space-between;font-size:12px;color:#8b91a3;font-family:'IBM Plex Mono',monospace;flex-wrap:wrap;gap:8px;">
+      <span>&copy; 2026 SHIVI ELECTRONICS SYSTEM</span><span>CIN [&mdash;] &middot; IS 16242 / IEC 62040-1 &middot; ISO 9001 &middot; BIS</span>
+    </div>
+  </div>
+</footer>
+
+</x-dc>
+</body>
+</html>

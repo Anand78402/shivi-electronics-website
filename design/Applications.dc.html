@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+  <style>
+    *{box-sizing:border-box;}
+    body{margin:0;background:#ffffff;color:#0a0e1a;font-family:"IBM Plex Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+    h1,h2,h3{font-family:"Space Grotesk","Arial Black",system-ui,sans-serif;margin:0;line-height:1.04;letter-spacing:-0.02em;}
+    p{margin:0;line-height:1.55;}
+    a{color:#132a9e;text-decoration:none;} a:hover{color:#1b3bd6;}
+    .eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#132a9e;}
+    .wrap{max-width:1440px;margin:0 auto;padding:0 100px;}
+    .btn{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 26px;font-weight:600;font-size:15px;border:2px solid #0a0e1a;cursor:pointer;font-family:inherit;}
+    .btn-amber{background:#f5a300;color:#0a0e1a;} .btn-ink{background:#0a0e1a;color:#fff;}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:88px;border-bottom:2px solid #0a0e1a;}
+    .nav-links{display:flex;align-items:center;gap:26px;font-size:14px;font-weight:500;} .nav-links a{color:#0a0e1a;}
+    .mark{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:22px;letter-spacing:-0.03em;display:flex;align-items:baseline;gap:8px;}
+    .mark small{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:0.2em;font-weight:500;color:#3a4256;}
+    .foot{background:#0a0e1a;color:#c7cbd6;} .foot a{color:#c7cbd6;} .foot a:hover{color:#f5a300;}
+    .crumb{font-family:"IBM Plex Mono",monospace;font-size:12px;color:#6b7288;letter-spacing:0.06em;}
+    .acard{border:2px solid #0a0e1a;padding:26px;background:#fff;display:flex;flex-direction:column;gap:12px;min-height:220px;}
+    .acard h3{font-size:21px;}
+    .acard a{font-size:14px;font-weight:600;margin-top:auto;}
+  </style>
+</helmet>
+
+<div class="wrap">
+  <nav class="nav">
+    <div class="mark">SHIVI <small>ELECTRONICS&nbsp;SYSTEM</small></div>
+    <div class="nav-links">
+      <a href="#">Products</a><a href="#" style="color:#132a9e;">Applications</a><a href="#">Services</a>
+      <a href="#">About</a><a href="#">Blog</a><a href="#">Contact</a>
+      <a href="#" class="btn btn-amber" style="height:44px;padding:0 18px;font-size:14px;">Get a quote</a>
+    </div>
+  </nav>
+</div>
+
+<div class="wrap" style="padding-top:56px;padding-bottom:48px;">
+  <div class="crumb">Home / Applications</div>
+  <h1 style="font-size:68px;margin-top:16px;">Applications</h1>
+  <p style="margin-top:20px;max-width:680px;font-size:17px;color:#3a4256;">Every sector runs software-controlled machinery that cannot tolerate an unstable transmission line. We size protection around the equipment it guards &mdash; here is where our systems work.</p>
+</div>
+
+<div class="wrap" style="padding-bottom:80px;">
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;">
+
+    <article class="acard">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#132a9e" stroke-width="2"><rect x="3" y="8" width="18" height="9"/><path d="M7 8V4h10v4M7 17v3h10v-3"/></svg>
+      <h3>Printing Industry</h3>
+      <p style="font-size:13.5px;color:#3a4256;">CTP, digital and UV flatbed printers, large-format, laser engravers, CNC routers, plotters and presses.</p>
+      <a href="#">See solutions &rarr;</a>
+    </article>
+
+    <article class="acard">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#132a9e" stroke-width="2"><path d="M12 5v14M5 12h14"/><circle cx="12" cy="12" r="9"/></svg>
+      <h3>Medical &amp; Healthcare</h3>
+      <p style="font-size:13.5px;color:#3a4256;">Medical-grade UPS for imaging (MRI, CT, X-ray), HIS, RIS/PACS networks and clinical laboratory equipment.</p>
+      <a href="#">See solutions &rarr;</a>
+    </article>
+
+    <article class="acard">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#132a9e" stroke-width="2"><path d="M3 21h18M6 21V8l6-4 6 4v13M10 12h4v9h-4z"/></svg>
+      <h3>Industrial Systems</h3>
+      <p style="font-size:13.5px;color:#3a4256;">Rugged protection for process lines, drives, PLCs and heavy machinery against sags, surges and outages.</p>
+      <a href="#">See solutions &rarr;</a>
+    </article>
+
+    <article class="acard">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#132a9e" stroke-width="2"><path d="M4 8h16l-1 12H5L4 8zM8 8V6a4 4 0 0 1 8 0v2"/></svg>
+      <h3>Retail</h3>
+      <p style="font-size:13.5px;color:#3a4256;">Keeps POS, billing, refrigeration control and networking online through mains disturbances.</p>
+      <a href="#">See solutions &rarr;</a>
+    </article>
+
+    <article class="acard">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#132a9e" stroke-width="2"><path d="M4 12a8 8 0 0 1 16 0M7 12a5 5 0 0 1 10 0M12 12v8"/></svg>
+      <h3>Broadcasting</h3>
+      <p style="font-size:13.5px;color:#3a4256;">Redundant power for studios, transmitters and playout &mdash; N+1 sine-wave backup with no on-air break.</p>
+      <a href="#">See solutions &rarr;</a>
+    </article>
+
+    <article class="acard">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#132a9e" stroke-width="2"><rect x="3" y="4" width="18" height="12"/><path d="M8 20h8M12 16v4"/></svg>
+      <h3>IT Systems &amp; Networks</h3>
+      <p style="font-size:13.5px;color:#3a4256;">Server rooms, data centres and network installations &mdash; double-conversion UPS with SNMP monitoring.</p>
+      <a href="#">See solutions &rarr;</a>
+    </article>
+
+    <article class="acard">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#132a9e" stroke-width="2"><path d="M3 11l9-7 9 7M5 10v10h14V10"/></svg>
+      <h3>Home / Small Office</h3>
+      <p style="font-size:13.5px;color:#3a4256;">Sine-wave inverters and stabilizers with site and load study, product selection and earthing guidance.</p>
+      <a href="#">See solutions &rarr;</a>
+    </article>
+
+    <article class="acard">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#132a9e" stroke-width="2"><rect x="4" y="4" width="16" height="16"/><path d="M9 9h6v6H9z"/></svg>
+      <h3>BFSI &amp; ATMs</h3>
+      <p style="font-size:13.5px;color:#3a4256;">Continuous power and clean voltage for ATM sites and branch infrastructure, with AMC coverage.</p>
+      <a href="#">See solutions &rarr;</a>
+    </article>
+
+    <article class="acard">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#132a9e" stroke-width="2"><path d="M12 3v18M4 8l8 4 8-4"/></svg>
+      <h3>Telecommunications</h3>
+      <p style="font-size:13.5px;color:#3a4256;">Sine-wave inverters for AC telecom equipment &mdash; N+1 redundancy, rack-mount, high surge, noiseless.</p>
+      <a href="#">See solutions &rarr;</a>
+    </article>
+
+  </div>
+</div>
+
+<div style="background:#f5a300;">
+  <div class="wrap" style="padding-top:52px;padding-bottom:52px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;">
+    <h2 style="font-size:32px;max-width:640px;">Don't see your sector? We customise for almost any load.</h2>
+    <a href="#" class="btn btn-ink">Talk to an engineer</a>
+  </div>
+</div>
+
+<footer class="foot">
+  <div class="wrap" style="padding-top:64px;padding-bottom:40px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;">
+    <div>
+      <div class="mark" style="color:#fff;">SHIVI <small style="color:#8b91a3;">ELECTRONICS&nbsp;SYSTEM</small></div>
+      <p style="margin-top:16px;font-size:14px;max-width:300px;">Total power management &mdash; Online UPS, inverters, stabilizers and transformers engineered for critical loads.</p>
+      <p style="margin-top:18px;font-size:13px;color:#8b91a3;">[Unit address line], [City] &ndash; [PIN], [State], India</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;"><div class="eyebrow" style="color:#8b91a3;">Products</div>
+      <a href="#">Online UPS</a><a href="#">Inverters</a><a href="#">Stabilizers</a><a href="#">CVT &amp; Isolation</a><a href="#">Batteries</a></div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;"><div class="eyebrow" style="color:#8b91a3;">Company</div>
+      <a href="#">About</a><a href="#">Applications</a><a href="#">Services</a><a href="#">Blog</a><a href="#">Careers</a></div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;"><div class="eyebrow" style="color:#8b91a3;">Contact</div>
+      <a href="#">[+91 XXXXX XXXXX]</a><a href="#">[hello@shivielectronics.in]</a><a href="#">Service request</a><a href="#">Warranty registration</a></div>
+  </div>
+  <div style="border-top:1px solid #23293a;">
+    <div class="wrap" style="padding-top:20px;padding-bottom:24px;display:flex;justify-content:space-between;font-size:12px;color:#8b91a3;font-family:'IBM Plex Mono',monospace;flex-wrap:wrap;gap:8px;">
+      <span>&copy; 2026 SHIVI ELECTRONICS SYSTEM</span><span>CIN [&mdash;] &middot; IS 16242 / IEC 62040-1 &middot; ISO 9001 &middot; BIS</span>
+    </div>
+  </div>
+</footer>
+
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=IBM+Plex+Sans:wght@400;600&display=swap">
+  <style>
+    *{box-sizing:border-box;}
+    body{margin:0;background:#ffffff;color:#1a1a1a;font-family:"IBM Plex Sans",system-ui,sans-serif;}
+    h1,h2,h3{font-family:"Kalam","Comic Sans MS",cursive;margin:0;font-weight:700;line-height:1.15;}
+    p{margin:0;line-height:1.5;font-size:13px;color:#4a4a4a;}
+    .w{max-width:1240px;margin:0 auto;padding:0 48px;}
+    .lbl{font-family:"Kalam",cursive;font-size:12px;color:#8a8a8a;text-transform:uppercase;letter-spacing:0.1em;}
+    .box{border:1.5px dashed #9a9a9a;background:#f2f2f2;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#6a6a6a;font-family:"Kalam",cursive;font-size:14px;text-align:center;padding:14px;}
+    .card{border:1.5px solid #1a1a1a;border-radius:4px;padding:16px;display:flex;flex-direction:column;gap:8px;}
+    .btn{border:1.5px solid #1a1a1a;border-radius:4px;padding:9px 14px;font-size:12.5px;background:#1a1a1a;color:#fff;font-family:"Kalam",cursive;display:inline-flex;align-items:center;justify-content:center;}
+    .btn.o{background:#fff;color:#1a1a1a;}
+    .row{display:flex;gap:14px;}
+    .hdr{display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid #1a1a1a;padding:14px 0;}
+    .sec{border-top:1px dashed #c4c4c4;padding:28px 0;}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+    .grid6{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;}
+    .note{font-family:"Kalam",cursive;font-size:11px;color:#b06a00;}
+  </style>
+</helmet>
+
+<div class="w">
+  <div class="hdr">
+    <div class="box" style="width:150px;height:34px;">LOGO</div>
+    <div class="row" style="font-family:'Kalam',cursive;font-size:13px;align-items:center;">
+      <span>Products</span><span>Solutions</span><span>Service &amp; Support</span><span>Resources</span><span>About</span>
+      <span class="box" style="width:34px;height:30px;">Q</span>
+      <span style="font-weight:700;">24&times;7&nbsp;[phone]</span>
+      <span class="btn">Get a quote</span>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="sec" style="border-top:none;display:grid;grid-template-columns:1.05fr 0.95fr;gap:32px;align-items:center;">
+    <div>
+      <div class="lbl">H1 — value proposition (1 line, specific)</div>
+      <h1 style="font-size:40px;margin-top:8px;">Power protection, engineered<br>and serviced across India</h1>
+      <p style="margin-top:12px;max-width:420px;">Sub-copy: what we make, who it's for, why it's trusted. 2 sentences.</p>
+      <div class="row" style="margin-top:18px;flex-wrap:wrap;">
+        <span class="btn">Find your UPS</span>
+        <span class="btn o">Download datasheets</span>
+        <span class="btn o">Talk to an engineer</span>
+      </div>
+    </div>
+    <div class="box" style="height:280px;">Product / installation photograph<br>(real image — not illustration)</div>
+  </div>
+
+  <!-- TRUST BAND -->
+  <div class="sec" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:space-between;background:#f7f7f5;padding:18px;border-radius:4px;">
+    <div class="lbl">Trust band</div>
+    <div class="row" style="flex-wrap:wrap;">
+      <span class="box" style="width:90px;height:40px;">ISO 9001</span>
+      <span class="box" style="width:110px;height:40px;">IEC 62040-1</span>
+      <span class="box" style="width:70px;height:40px;">BIS</span>
+      <span class="box" style="width:60px;height:40px;">CE</span>
+      <span class="box" style="width:80px;height:40px;">RoHS</span>
+    </div>
+    <div style="font-family:'Kalam',cursive;font-size:13px;">20+ yrs&nbsp;&middot;&nbsp;[NN] service locations&nbsp;&middot;&nbsp;[installed-base logos]</div>
+  </div>
+
+  <!-- PRODUCT CATEGORIES -->
+  <div class="sec">
+    <div class="lbl">Product categories — 6</div>
+    <div class="grid6" style="margin-top:12px;">
+      <div class="card"><div class="box" style="height:44px;">icon</div><h3 style="font-size:14px;">Online UPS</h3><p style="font-size:11px;">1&ndash;200 kVA</p></div>
+      <div class="card"><div class="box" style="height:44px;">icon</div><h3 style="font-size:14px;">Inverters</h3><p style="font-size:11px;">800 VA&ndash;100 kVA</p></div>
+      <div class="card"><div class="box" style="height:44px;">icon</div><h3 style="font-size:14px;">Stabilizers</h3><p style="font-size:11px;">1&ndash;1000 kVA</p></div>
+      <div class="card"><div class="box" style="height:44px;">icon</div><h3 style="font-size:14px;">Transformers</h3><p style="font-size:11px;">CVT &amp; isolation</p></div>
+      <div class="card"><div class="box" style="height:44px;">icon</div><h3 style="font-size:14px;">Batteries</h3><p style="font-size:11px;">150&ndash;220 Ah</p></div>
+      <div class="card"><div class="box" style="height:44px;">icon</div><h3 style="font-size:14px;">Solar</h3><p style="font-size:11px;">Power systems</p></div>
+    </div>
+  </div>
+
+  <!-- FIND YOUR UPS -->
+  <div class="sec" style="background:#1a1a1a;color:#fff;border-radius:4px;padding:22px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
+    <h3 style="font-size:18px;color:#fff;">Find your UPS</h3>
+    <div class="box" style="flex:1;min-width:220px;height:44px;background:#333;border-color:#666;color:#ccc;">capacity slider (kVA)</div>
+    <div class="box" style="width:150px;height:44px;background:#333;border-color:#666;color:#ccc;">1&phi; / 3&phi; toggle</div>
+    <span class="btn o">See matches</span>
+  </div>
+
+  <!-- SOLUTIONS -->
+  <div class="sec">
+    <div class="lbl">Solutions by industry — 9 tiles</div>
+    <div class="grid3" style="margin-top:12px;">
+      <div class="box" style="height:60px;">Printing</div><div class="box" style="height:60px;">Healthcare</div><div class="box" style="height:60px;">Industrial</div>
+      <div class="box" style="height:60px;">Retail</div><div class="box" style="height:60px;">Broadcasting</div><div class="box" style="height:60px;">IT &amp; Networks</div>
+      <div class="box" style="height:60px;">Home / SOHO</div><div class="box" style="height:60px;">BFSI &amp; ATM</div><div class="box" style="height:60px;">Telecom</div>
+    </div>
+  </div>
+
+  <!-- WHY SHIVI + TOPOLOGY -->
+  <div class="sec" style="display:grid;grid-template-columns:1fr 1fr;gap:28px;">
+    <div>
+      <div class="lbl">Why Shivi</div>
+      <ul style="font-family:'Kalam',cursive;font-size:14px;line-height:1.9;padding-left:18px;margin:8px 0 0;">
+        <li>In-house manufacturing &amp; QA</li>
+        <li>Customised to the load, not a catalogue</li>
+        <li>Multi-brand AMC &amp; service network</li>
+        <li>Certified to IS 16242 / IEC 62040-1</li>
+      </ul>
+    </div>
+    <div class="box" style="height:180px;">Signature diagram:<br>double-conversion topology<br>(mains &rarr; rectifier &rarr; DC bus + battery &rarr; inverter &rarr; load, + bypass)</div>
+  </div>
+
+  <!-- CASE STUDIES -->
+  <div class="sec">
+    <div class="lbl">Case studies — 3</div>
+    <div class="grid3" style="margin-top:12px;">
+      <div class="card"><div class="box" style="height:40px;">client logo</div><p>Sector + one-line result / capacity installed</p><span style="font-family:'Kalam',cursive;font-size:12px;">Read &rarr;</span></div>
+      <div class="card"><div class="box" style="height:40px;">client logo</div><p>Sector + one-line result / capacity installed</p><span style="font-family:'Kalam',cursive;font-size:12px;">Read &rarr;</span></div>
+      <div class="card"><div class="box" style="height:40px;">client logo</div><p>Sector + one-line result / capacity installed</p><span style="font-family:'Kalam',cursive;font-size:12px;">Read &rarr;</span></div>
+    </div>
+  </div>
+
+  <!-- RESOURCES TEASER -->
+  <div class="sec" style="display:flex;gap:14px;flex-wrap:wrap;">
+    <div class="box" style="flex:1;height:64px;">Datasheets &amp; catalogues</div>
+    <div class="box" style="flex:1;height:64px;">Load / runtime calculator</div>
+    <div class="box" style="flex:1;height:64px;">Nine power problems</div>
+  </div>
+
+  <!-- CTA BAND -->
+  <div class="sec" style="display:flex;align-items:center;justify-content:space-between;gap:20px;background:#f7f7f5;border-radius:4px;padding:24px;">
+    <h3 style="font-size:20px;">Planning a setup? Start with a load study.</h3>
+    <span class="btn">Request a site survey</span>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="sec" style="border-top:2px solid #1a1a1a;">
+    <div class="grid3">
+      <div><div class="lbl">Nav columns</div><p>Products · Solutions · Service · Resources · About · Careers</p></div>
+      <div><div class="lbl">Contact</div><p>Registered address · 24×7 line (orange) · office-hours line · email</p></div>
+      <div><div class="lbl">Legal / trust</div><p>Certs · CIN · warranty registration · service request · social</p></div>
+    </div>
+  </div>
+  <p class="note" style="padding:14px 0 40px;">Wireframe — structure &amp; flow only. No brand colour or final copy. See "Identity" board for the visual system.</p>
+</div>
+
+</x-dc>
+</body>
+</html>

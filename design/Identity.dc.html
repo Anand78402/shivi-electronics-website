@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <style>
+    *{box-sizing:border-box;}
+    body{margin:0;background:#F7F7F5;color:#1A1D21;font-family:"IBM Plex Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+    h1,h2,h3{margin:0;font-weight:600;letter-spacing:-0.01em;line-height:1.2;}
+    p{margin:0;line-height:1.55;}
+    .w{max-width:1160px;margin:0 auto;padding:48px;}
+    .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#5B6470;}
+    .panel{background:#fff;border:1px solid #E6E8EC;border-radius:6px;padding:24px;}
+    .sw{border:1px solid #E6E8EC;border-radius:6px;overflow:hidden;}
+    .sw .chip{height:96px;}
+    .sw .meta{padding:10px 12px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:#5B6470;line-height:1.5;}
+    .grid{display:grid;gap:16px;}
+    .btnp{display:inline-flex;align-items:center;justify-content:center;height:44px;padding:0 20px;border-radius:5px;font-weight:600;font-size:14px;}
+    .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+    table{border-collapse:collapse;width:100%;font-size:13px;}
+    td{border:1px solid #E6E8EC;padding:10px 12px;}
+    td.k{background:#F1F2F4;font-weight:600;width:38%;}
+    .cert{display:inline-flex;align-items:center;height:34px;padding:0 12px;border:1px solid #C9CED6;border-radius:4px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:#3A424E;background:#fff;}
+    .tag{display:inline-flex;align-items:center;height:26px;padding:0 10px;border-radius:999px;background:#EAEEF7;color:#1F4FB0;font-size:12px;font-weight:600;}
+  </style>
+</helmet>
+
+<div class="w">
+  <div class="eyebrow">Shivi Electronics System — visual identity (starting point)</div>
+  <h1 style="font-size:34px;margin-top:10px;">Technical authority</h1>
+  <p style="margin-top:8px;color:#5B6470;max-width:640px;">Light, print-friendly, photography-forward. Calm and dense-but-scannable. One functional accent; orange reserved for urgency only.</p>
+
+  <!-- COLOUR 60-30-10 -->
+  <h2 style="font-size:18px;margin-top:36px;">Colour — 60 / 30 / 10</h2>
+  <div class="grid" style="grid-template-columns:repeat(3,1fr);margin-top:14px;">
+    <div class="sw"><div class="chip" style="background:#F7F7F5;border-bottom:1px solid #E6E8EC;"></div><div class="meta">#F7F7F5 · Paper<br>60% — page background</div></div>
+    <div class="sw"><div class="chip" style="background:#1A1D21;"></div><div class="meta" style="color:#8a8a8a;">#1A1D21 · Ink<br>60% — body text, headings</div></div>
+    <div class="sw"><div class="chip" style="background:#FFFFFF;border-bottom:1px solid #E6E8EC;"></div><div class="meta">#FFFFFF · Surface<br>cards, tables, buy-box</div></div>
+    <div class="sw"><div class="chip" style="background:#5B6470;"></div><div class="meta" style="color:#cfd3d9;">#5B6470 · Slate<br>30% — secondary text, labels</div></div>
+    <div class="sw"><div class="chip" style="background:#E6E8EC;"></div><div class="meta">#E6E8EC · Hairline<br>30% — borders, rules, panels</div></div>
+    <div class="sw"><div class="chip" style="background:#1F4FB0;"></div><div class="meta" style="color:#c8d3ee;">#1F4FB0 · Signal Blue<br>10% — links, primary buttons, active</div></div>
+    <div class="sw"><div class="chip" style="background:#E8571F;"></div><div class="meta" style="color:#f4cbbb;">#E8571F · Service Orange<br>&lt;2% — 24×7 service / urgent ONLY</div></div>
+    <div class="sw"><div class="chip" style="background:#0E3A8A;"></div><div class="meta" style="color:#c8d3ee;">#0E3A8A · Blue-dark<br>hover / pressed state</div></div>
+  </div>
+
+  <!-- TYPE -->
+  <h2 style="font-size:18px;margin-top:36px;">Type — IBM Plex Sans + IBM Plex Mono</h2>
+  <div class="panel" style="margin-top:14px;">
+    <div style="font-size:40px;font-weight:600;letter-spacing:-0.02em;">Power protection, engineered</div>
+    <div style="font-size:26px;font-weight:600;margin-top:14px;">Section heading — 26 / 600</div>
+    <div style="font-size:18px;font-weight:600;margin-top:12px;">Sub-heading — 18 / 600</div>
+    <p style="font-size:15px;margin-top:12px;max-width:620px;">Body — 15 / 400, line-height 1.55. Used for all running copy: descriptions, application text, service detail. Comfortable at reading distance, prints cleanly.</p>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#5B6470;margin-top:14px;">Mono label — spec keys, eyebrows, part numbers</div>
+  </div>
+
+  <!-- COMPONENTS -->
+  <h2 style="font-size:18px;margin-top:36px;">Components</h2>
+  <div class="grid" style="grid-template-columns:1fr 1fr;margin-top:14px;">
+    <div class="panel">
+      <div class="eyebrow">Buttons</div>
+      <div class="row" style="margin-top:12px;">
+        <span class="btnp" style="background:#1F4FB0;color:#fff;">Request a quote</span>
+        <span class="btnp" style="background:#fff;color:#1A1D21;border:1px solid #C9CED6;">Download datasheet</span>
+        <span class="btnp" style="background:#fff;color:#E8571F;border:1px solid #E8571F;">Call 24×7 service</span>
+      </div>
+      <p style="font-size:12px;color:#5B6470;margin-top:12px;">One primary (blue) per view. Orange only on the service call.</p>
+    </div>
+    <div class="panel">
+      <div class="eyebrow">Input</div>
+      <div style="margin-top:12px;border:1px solid #C9CED6;border-radius:5px;height:44px;display:flex;align-items:center;padding:0 12px;color:#8a8a8a;font-size:14px;">Capacity needed (kVA)</div>
+      <div style="margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#5B6470;">Label above · 44px height · 5px radius</div>
+    </div>
+    <div class="panel">
+      <div class="eyebrow">Product card</div>
+      <div style="margin-top:12px;border:1px solid #E6E8EC;border-radius:6px;overflow:hidden;">
+        <div style="height:80px;background:#F1F2F4;"></div>
+        <div style="padding:12px;">
+          <div style="font-weight:600;font-size:14px;">Industrial Online UPS</div>
+          <div style="font-size:12px;color:#5B6470;margin-top:2px;">3–200 kVA · 1φ &amp; 3φ</div>
+          <div class="row" style="margin-top:10px;"><span class="tag">Datasheet</span><span class="tag" style="background:#1F4FB0;color:#fff;">RFQ</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="eyebrow">Spec table row</div>
+      <table style="margin-top:12px;">
+        <tr><td class="k">Output regulation</td><td>±1% all line / load conditions</td></tr>
+        <tr><td class="k">THD</td><td>&lt;3% at linear load</td></tr>
+      </table>
+    </div>
+    <div class="panel">
+      <div class="eyebrow">Certification chips</div>
+      <div class="row" style="margin-top:12px;">
+        <span class="cert">ISO 9001</span><span class="cert">IEC 62040-1</span><span class="cert">BIS</span><span class="cert">CE</span><span class="cert">RoHS</span>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="eyebrow">Rules</div>
+      <ul style="font-size:12.5px;color:#3A424E;line-height:1.9;padding-left:16px;margin:10px 0 0;">
+        <li>Radius 5–6px · borders 1px #E6E8EC · shadow only on overlays</li>
+        <li>Whitespace over dividers; spec tables are first-class</li>
+        <li>Real photography; diagrams for topology</li>
+        <li>Mobile: single column, sticky Quote + Call, tap targets ≥44px</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>
