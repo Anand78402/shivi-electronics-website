@@ -77,22 +77,6 @@ document.addEventListener('DOMContentLoaded', function () {
     counters.forEach(function (el) { counterIO.observe(el); });
   }
 
-  /* ---------- Product tabs ---------- */
-  var tabBtns = document.querySelectorAll('.tab-btn');
-  if (tabBtns.length) {
-    tabBtns.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var group = btn.closest('[data-tab-group]');
-        if (!group) return;
-        group.querySelectorAll('.tab-btn').forEach(function (b) { b.classList.remove('active'); });
-        group.querySelectorAll('.tab-panel').forEach(function (p) { p.classList.remove('active'); });
-        btn.classList.add('active');
-        var target = group.querySelector('#' + btn.getAttribute('data-tab'));
-        if (target) target.classList.add('active');
-      });
-    });
-  }
-
   /* ---------- Testimonial slider ---------- */
   var testiWrap = document.querySelector('.testi-wrap');
   if (testiWrap) {
@@ -193,6 +177,9 @@ document.addEventListener('DOMContentLoaded', function () {
             success.setAttribute('tabindex', '-1');
             success.focus({ preventScroll: true });
           }
+          if (form.classList.contains('enquiry-popup-form')) {
+            try { localStorage.setItem('shiviEnquirySubmitted', '1'); } catch (e) {}
+          }
           form.reset();
           fields.forEach(function (f) { f.classList.remove('invalid'); });
         }).catch(function (err) {
@@ -280,8 +267,13 @@ document.addEventListener('DOMContentLoaded', function () {
       }).observe(popupSuccess, { attributes: true, attributeFilter: ['class'] });
     }
 
-    // Auto-show shortly after every page load/navigation
-    setTimeout(function () { openPopup('Quick Enquiry'); }, 1200);
+    // Auto-show shortly after every page load/navigation — but not once the
+    // visitor has already submitted the enquiry popup at least once.
+    var alreadySubmitted = false;
+    try { alreadySubmitted = !!localStorage.getItem('shiviEnquirySubmitted'); } catch (e) {}
+    if (!alreadySubmitted) {
+      setTimeout(function () { openPopup('Quick Enquiry'); }, 1200);
+    }
   }
 
   /* ---------- Active nav highlight ---------- */

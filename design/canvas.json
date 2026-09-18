@@ -3,7 +3,8 @@
     { "id": "dir-a", "name": "A · Bold modern" },
     { "id": "dir-b", "name": "B · Industrial technical" },
     { "id": "dir-c", "name": "C · Clean corporate" },
-    { "id": "dir-d", "name": "D · Wireframes + identity" }
+    { "id": "dir-d", "name": "D · Wireframes + identity" },
+    { "id": "dir-e", "name": "E · Admin panel" }
   ],
   "artboards": [
     { "file": "Main.dc.html", "page": "dir-a", "x": 0, "y": 0, "w": 1440, "h": 4450, "title": "Home" },
@@ -27,13 +28,19 @@
     { "file": "WireProductDetail.dc.html", "page": "dir-d", "x": 3040, "y": 0, "w": 1320, "h": 1850, "title": "Wire — Product detail" },
     { "file": "WireService.dc.html", "page": "dir-d", "x": 0, "y": 2800, "w": 1320, "h": 1650, "title": "Wire — Service & Support" },
     { "file": "WireContact.dc.html", "page": "dir-d", "x": 1520, "y": 2800, "w": 1320, "h": 1500, "title": "Wire — Contact / RFQ" },
-    { "file": "Identity.dc.html", "page": "dir-d", "x": 3040, "y": 2800, "w": 1320, "h": 1900, "title": "Visual identity" }
+    { "file": "Identity.dc.html", "page": "dir-d", "x": 3040, "y": 2800, "w": 1320, "h": 1900, "title": "Visual identity" },
+
+    { "file": "AdminLogin.dc.html", "page": "dir-e", "x": 0, "y": 0, "w": 1000, "h": 800, "title": "Admin — Login" },
+    { "file": "AdminDashboard.dc.html", "page": "dir-e", "x": 1120, "y": 0, "w": 1440, "h": 900, "title": "Admin — Dashboard" },
+    { "file": "AdminProducts.dc.html", "page": "dir-e", "x": 2680, "y": 0, "w": 1440, "h": 1040, "title": "Admin — Products" },
+    { "file": "AdminLeads.dc.html", "page": "dir-e", "x": 4240, "y": 0, "w": 1440, "h": 1040, "title": "Admin — Enquiries & Leads" }
   ],
   "annotations": [
     { "id": "brief", "page": "dir-a", "x": -380, "y": 0, "w": 320, "text": "DIRECTION A — Bold modern\n\nDeep blue + amber, huge Space Grotesk display type, hard edges, big colour blocks. Confident and current; strongest brand recall.\n\nTradeoff: the loudest of the three — leans marketing over spec-sheet.\n\nFull 9-page site. Clickable: Products filter (15 SKUs), Product-detail tabs. Product ranges and specs are from the supplied Product Catlog PDFs. Contact details (phone / email / address / CIN) are still bracketed placeholders." },
     { "id": "note-b", "page": "dir-b", "x": -380, "y": 0, "w": 320, "text": "DIRECTION B — Industrial technical\n\nDark UI, Chakra Petch + IBM Plex Mono, visible grid lines, spec-sheet tables and data readouts. Reads like test equipment; signals engineering depth to technical buyers.\n\nTradeoff: dark + dense is harder to keep readable across a long marketing site; less warm.\n\nShown: Home + Products (clickable filter)." },
     { "id": "note-c", "page": "dir-c", "x": -380, "y": 0, "w": 320, "text": "DIRECTION C — Clean corporate\n\nLight and airy, Manrope headings, rounded cards, soft shadows, photo placeholders, trust-logo row. Calm, safe, broadly approachable B2B.\n\nTradeoff: the most conventional — easy to execute, but least distinctive.\n\nShown: Home + Products (clickable filter)." },
-    { "id": "note-d", "page": "dir-d", "x": -400, "y": 0, "w": 340, "text": "DIRECTION D — the recommended path\n\nStrategy → sitemap → wireframes → identity, done in order. A/B/C jumped to visuals and missed what wins this category: technical credibility, trust architecture (certs, case studies, service network), and buyer-path CTAs for engineers / procurement / urgent.\n\nThese 5 wireframes are low-fi on purpose — structure and flow only, no brand colour or final copy. New here vs A/B/C: trust band, Find-your-UPS selector, topology diagram, Service & Support as a top-level section with a coverage map, load calculator, case studies, and an RFQ that captures role + capacity + load schedule.\n\nThe Identity board is the visual system to build the hi-fi pass on: 60/30/10 (paper / slate + hairline / signal-blue), orange reserved for the 24×7 line only, IBM Plex Sans + Mono.\n\nNext: build hi-fi Home + Products + Product detail + Service from these." }
+    { "id": "note-d", "page": "dir-d", "x": -400, "y": 0, "w": 340, "text": "DIRECTION D — the recommended path\n\nStrategy → sitemap → wireframes → identity, done in order. A/B/C jumped to visuals and missed what wins this category: technical credibility, trust architecture (certs, case studies, service network), and buyer-path CTAs for engineers / procurement / urgent.\n\nThese 5 wireframes are low-fi on purpose — structure and flow only, no brand colour or final copy. New here vs A/B/C: trust band, Find-your-UPS selector, topology diagram, Service & Support as a top-level section with a coverage map, load calculator, case studies, and an RFQ that captures role + capacity + load schedule.\n\nThe Identity board is the visual system to build the hi-fi pass on: 60/30/10 (paper / slate + hairline / signal-blue), orange reserved for the 24×7 line only, IBM Plex Sans + Mono.\n\nNext: build hi-fi Home + Products + Product detail + Service from these." },
+    { "id": "note-e", "page": "dir-e", "x": -380, "y": 0, "w": 320, "text": "ADMIN PANEL — matches the live site\n\nBuilt to the actual deployed site's design system (shivielectronics.github.io), not Direction A–D's exploratory identity: white/soft-lilac \"petal\" theme, purple→purple-deep gradient accent, pill buttons, 14px card radius, Segoe UI/Inter.\n\n4 static mockups: Login, Dashboard (stats + recent enquiries + quick actions), Products (catalogue table with category filter chips), Enquiries & Leads (Contact / Service Request / Site Survey / Quote / Warranty submissions with status).\n\nEnquiry types mirror the site's real forms. Data shown (names, counts, dates) is sample — not live." }
   ],
-  "launch": { "view": "canvas", "page": "dir-d" }
+  "launch": { "view": "canvas", "page": "dir-e" }
 }

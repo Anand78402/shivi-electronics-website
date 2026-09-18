@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    *{box-sizing:border-box;}
+    body{margin:0;background:#f6f5fc;color:#1b1f3b;font-family:"Segoe UI","Inter",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;}
+    a{color:#6c5ce7;text-decoration:none;} a:hover{color:#4b3fc4;}
+    .shell{display:flex;min-height:1040px;}
+
+    .side{width:250px;flex-shrink:0;background:#1b1f3b;color:#fff;display:flex;flex-direction:column;padding:22px 16px;}
+    .brand{display:flex;align-items:center;gap:10px;padding:6px 8px 26px;}
+    .mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#6c5ce7,#ffb65a);flex-shrink:0;}
+    .bname{font-weight:800;font-size:14.5px;letter-spacing:-0.01em;line-height:1.25;color:#fff;}
+    .bname small{display:block;font-weight:600;font-size:10.5px;color:#b6adf5;letter-spacing:0.06em;text-transform:uppercase;}
+    .navgroup{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6a70a0;margin:18px 10px 8px;}
+    .nav-item{display:flex;align-items:center;gap:12px;height:42px;padding:0 12px;border-radius:8px;font-size:14px;font-weight:600;color:#c6c9e6;margin-bottom:2px;}
+    .nav-item.active{background:linear-gradient(135deg,#6c5ce7,#4b3fc4);color:#fff;}
+    .side-foot{margin-top:auto;display:flex;align-items:center;gap:10px;padding:14px 10px 6px;border-top:1px solid #2c3157;}
+    .avatar{width:34px;height:34px;border-radius:999px;background:#ffb65a;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:#1b1f3b;flex-shrink:0;}
+    .uname{font-size:13px;font-weight:700;color:#fff;line-height:1.3;}
+    .urole{font-size:11.5px;color:#9aa0cc;}
+
+    .main{flex:1;min-width:0;}
+    .topbar{height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:#fff;border-bottom:1px solid #e4e1f5;}
+    .title{font-size:20px;font-weight:800;letter-spacing:-0.01em;}
+    .search{width:280px;height:40px;border:1px solid #e4e1f5;border-radius:999px;background:#f6f5fc;display:flex;align-items:center;gap:8px;padding:0 16px;color:#8b90a8;font-size:13.5px;}
+    .content{padding:28px 32px 40px;}
+
+    .chips{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap;}
+    .chip{height:34px;display:flex;align-items:center;padding:0 16px;border-radius:999px;font-size:13px;font-weight:700;border:1px solid #e4e1f5;color:#565b78;background:#fff;}
+    .chip.active{background:#1b1f3b;color:#fff;border-color:#1b1f3b;}
+
+    .panel{background:#fff;border:1px solid #e4e1f5;border-radius:14px;overflow:hidden;}
+    table{width:100%;border-collapse:collapse;font-size:13.5px;}
+    th{text-align:left;padding:12px 22px;font-size:11.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#8b90a8;border-bottom:1px solid #e4e1f5;}
+    td{padding:14px 22px;border-bottom:1px solid #f1f3f8;vertical-align:middle;}
+    tr:last-child td{border-bottom:none;}
+    .who{font-weight:700;}
+    .whomail{font-size:12px;color:#8b90a8;margin-top:2px;}
+    .snippet{color:#565b78;font-size:12.5px;max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+    .badge{display:inline-flex;align-items:center;height:24px;padding:0 10px;border-radius:999px;font-size:11.5px;font-weight:700;}
+    .b-purple{background:#ece9fb;color:#6c5ce7;}
+    .b-orange{background:#fff2e0;color:#c9760a;}
+    .b-green{background:#e7f8ed;color:#16a34a;}
+    .b-red{background:#fdeaea;color:#dc2626;}
+    .sel{width:118px;height:30px;border-radius:999px;border:1px solid #e4e1f5;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:space-between;padding:0 10px;color:#565b78;}
+  </style>
+</helmet>
+
+<div class="shell">
+  <div class="side">
+    <div class="brand"><div class="mark"></div><div class="bname">Shivi Electronics<small>Admin Panel</small></div></div>
+
+    <div class="navgroup">Overview</div>
+    <div class="nav-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>Dashboard</div>
+
+    <div class="navgroup">Catalogue</div>
+    <div class="nav-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Products</div>
+
+    <div class="navgroup">Customers</div>
+    <div class="nav-item active"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20a7 7 0 0 1 14 0"/><circle cx="10" cy="8" r="4"/><path d="M17 11a4 4 0 0 0 0-8"/><path d="M21 20a6.5 6.5 0 0 0-4-6"/></svg>Enquiries &amp; Leads</div>
+
+    <div class="navgroup">Site</div>
+    <div class="nav-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V6a2 2 0 0 1 2-2h8l6 6v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 4v5h5"/></svg>Content</div>
+    <div class="nav-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 0 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.7 1.7 0 0 0 .34-1.87 1.7 1.7 0 0 0-1.55-1H3a2 2 0 0 1 0-4h.09a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.87.34H9a1.7 1.7 0 0 0 1-1.55V3a2 2 0 0 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87V9a1.7 1.7 0 0 0 1.55 1H21a2 2 0 0 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1z"/></svg>Settings</div>
+
+    <div class="side-foot"><div class="avatar">SE</div><div><div class="uname">Site Admin</div><div class="urole">shivielectronicsyst@gmail.com</div></div></div>
+  </div>
+
+  <div class="main">
+    <div class="topbar">
+      <div class="title">Enquiries &amp; Leads</div>
+      <div class="search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#8b90a8" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Search by name or email…</div>
+    </div>
+
+    <div class="content">
+      <div class="chips">
+        <div class="chip active">All (18)</div>
+        <div class="chip">Contact</div>
+        <div class="chip">Service Request</div>
+        <div class="chip">Site Survey</div>
+        <div class="chip">Quote Request</div>
+        <div class="chip">Warranty Registration</div>
+      </div>
+
+      <div class="panel">
+        <table>
+          <tr><th>From</th><th>Type</th><th>Message</th><th>Date</th><th>Status</th></tr>
+          <tr>
+            <td><div class="who">Rajesh Khanna</div><div class="whomail">rajesh.k@example.com</div></td>
+            <td><span class="badge b-purple">Quote Request</span></td>
+            <td><div class="snippet">Need 40 kVA online UPS for a print unit in Greater Noida</div></td>
+            <td>16 Sep</td>
+            <td><div class="sel">New<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div></td>
+          </tr>
+          <tr>
+            <td><div class="who">Meera Textiles</div><div class="whomail">accounts@meeratex.in</div></td>
+            <td><span class="badge b-orange">Service Request</span></td>
+            <td><div class="snippet">3-phase stabilizer tripping under load, urgent</div></td>
+            <td>15 Sep</td>
+            <td><div class="sel" style="color:#c9760a;">In Progress<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div></td>
+          </tr>
+          <tr>
+            <td><div class="who">Amit Verma</div><div class="whomail">amit.verma@corp.com</div></td>
+            <td><span class="badge b-green">Site Survey</span></td>
+            <td><div class="snippet">Site survey requested for new branch office setup</div></td>
+            <td>15 Sep</td>
+            <td><div class="sel" style="color:#16a34a;">Resolved<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div></td>
+          </tr>
+          <tr>
+            <td><div class="who">Kavya Diagnostics</div><div class="whomail">admin@kavyadiag.com</div></td>
+            <td><span class="badge b-purple">Warranty</span></td>
+            <td><div class="snippet">Warranty registration — Beta series 15 kVA unit</div></td>
+            <td>14 Sep</td>
+            <td><div class="sel" style="color:#16a34a;">Resolved<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div></td>
+          </tr>
+          <tr>
+            <td><div class="who">Sunil Prakash</div><div class="whomail">sunil.p@gmail.com</div></td>
+            <td><span class="badge b-purple">Contact</span></td>
+            <td><div class="snippet">General product question about MHF series pricing</div></td>
+            <td>13 Sep</td>
+            <td><div class="sel" style="color:#c9760a;">In Progress<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div></td>
+          </tr>
+          <tr>
+            <td><div class="who">Deepak Foods Pvt Ltd</div><div class="whomail">purchase@deepakfoods.in</div></td>
+            <td><span class="badge b-orange">Service Request</span></td>
+            <td><div class="snippet">AMC renewal overdue — cold storage backup UPS</div></td>
+            <td>12 Sep</td>
+            <td><div class="sel" style="color:#dc2626;">Overdue<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    *{box-sizing:border-box;}
+    body{margin:0;background:#f6f5fc;color:#1b1f3b;font-family:"Segoe UI","Inter",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;}
+    a{color:#6c5ce7;text-decoration:none;} a:hover{color:#4b3fc4;}
+    .wrap{min-height:720px;display:flex;align-items:center;justify-content:center;padding:40px;}
+    .card{width:400px;background:#ffffff;border:1px solid #e4e1f5;border-radius:14px;box-shadow:0 20px 45px -20px rgba(27,31,59,0.16);padding:40px 36px;}
+    .brand{display:flex;align-items:center;gap:10px;margin-bottom:28px;}
+    .mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,#6c5ce7,#ffb65a);flex-shrink:0;}
+    .bname{font-weight:800;font-size:16px;letter-spacing:-0.01em;line-height:1.25;}
+    .bname small{display:block;font-weight:600;font-size:11px;color:#6c5ce7;letter-spacing:0.06em;text-transform:uppercase;}
+    .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#8b90a8;margin-bottom:6px;}
+    h1{margin:0 0 26px;font-size:24px;font-weight:800;letter-spacing:-0.01em;}
+    label{display:block;font-size:13px;font-weight:600;color:#565b78;margin-bottom:6px;}
+    .field{margin-bottom:18px;}
+    .input{width:100%;height:46px;border:1px solid #e4e1f5;border-radius:8px;padding:0 14px;font-size:14px;color:#1b1f3b;background:#f6f5fc;}
+    .row{display:flex;align-items:center;justify-content:space-between;margin:4px 0 22px;}
+    .chk{display:flex;align-items:center;gap:8px;font-size:13px;color:#565b78;}
+    .btn{display:flex;align-items:center;justify-content:center;width:100%;height:48px;border-radius:999px;font-weight:700;font-size:15px;border:none;cursor:pointer;background:linear-gradient(135deg,#6c5ce7,#4b3fc4);color:#fff;box-shadow:0 10px 30px -10px rgba(75,63,196,0.35);}
+    .foot{margin-top:22px;text-align:center;font-size:13px;color:#8b90a8;}
+  </style>
+</helmet>
+
+<div class="wrap">
+  <div class="card">
+    <div class="brand">
+      <div class="mark"></div>
+      <div class="bname">Shivi Electronics<small>Admin Panel</small></div>
+    </div>
+
+    <div class="eyebrow">Sign in</div>
+    <h1>Manage your site</h1>
+
+    <div class="field">
+      <label>Email</label>
+      <div class="input" style="display:flex;align-items:center;color:#8b90a8;">admin@shivielectronicsyst.com</div>
+    </div>
+    <div class="field">
+      <label>Password</label>
+      <div class="input" style="display:flex;align-items:center;color:#8b90a8;letter-spacing:2px;">••••••••••</div>
+    </div>
+
+    <div class="row">
+      <div class="chk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6c5ce7" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 12l3 3 5-6"/></svg>Keep me signed in</div>
+      <a href="#" style="font-size:13px;font-weight:600;">Forgot password?</a>
+    </div>
+
+    <div class="btn">Sign in</div>
+    <div class="foot">Access restricted to Shivi Electronics staff.</div>
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>

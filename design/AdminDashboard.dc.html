@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    *{box-sizing:border-box;}
+    body{margin:0;background:#f6f5fc;color:#1b1f3b;font-family:"Segoe UI","Inter",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;}
+    a{color:#6c5ce7;text-decoration:none;} a:hover{color:#4b3fc4;}
+    .shell{display:flex;min-height:900px;}
+
+    /* Sidebar */
+    .side{width:250px;flex-shrink:0;background:#1b1f3b;color:#fff;display:flex;flex-direction:column;padding:22px 16px;}
+    .brand{display:flex;align-items:center;gap:10px;padding:6px 8px 26px;}
+    .mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#6c5ce7,#ffb65a);flex-shrink:0;}
+    .bname{font-weight:800;font-size:14.5px;letter-spacing:-0.01em;line-height:1.25;color:#fff;}
+    .bname small{display:block;font-weight:600;font-size:10.5px;color:#b6adf5;letter-spacing:0.06em;text-transform:uppercase;}
+    .navgroup{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6a70a0;margin:18px 10px 8px;}
+    .nav-item{display:flex;align-items:center;gap:12px;height:42px;padding:0 12px;border-radius:8px;font-size:14px;font-weight:600;color:#c6c9e6;margin-bottom:2px;}
+    .nav-item.active{background:linear-gradient(135deg,#6c5ce7,#4b3fc4);color:#fff;}
+    .nav-item svg{flex-shrink:0;}
+    .side-foot{margin-top:auto;display:flex;align-items:center;gap:10px;padding:14px 10px 6px;border-top:1px solid #2c3157;}
+    .avatar{width:34px;height:34px;border-radius:999px;background:#ffb65a;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:#1b1f3b;flex-shrink:0;}
+    .uname{font-size:13px;font-weight:700;color:#fff;line-height:1.3;}
+    .urole{font-size:11.5px;color:#9aa0cc;}
+
+    /* Main */
+    .main{flex:1;min-width:0;}
+    .topbar{height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:#fff;border-bottom:1px solid #e4e1f5;}
+    .title{font-size:20px;font-weight:800;letter-spacing:-0.01em;}
+    .search{width:280px;height:40px;border:1px solid #e4e1f5;border-radius:999px;background:#f6f5fc;display:flex;align-items:center;gap:8px;padding:0 16px;color:#8b90a8;font-size:13.5px;}
+    .top-right{display:flex;align-items:center;gap:16px;}
+    .bell{width:38px;height:38px;border-radius:999px;background:#f6f5fc;border:1px solid #e4e1f5;display:flex;align-items:center;justify-content:center;position:relative;}
+    .dot{position:absolute;top:9px;right:9px;width:7px;height:7px;border-radius:999px;background:#dc2626;}
+    .content{padding:28px 32px 40px;}
+
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:24px;}
+    .stat{background:#fff;border:1px solid #e4e1f5;border-radius:14px;padding:20px;}
+    .stat-label{font-size:12.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#8b90a8;}
+    .stat-val{font-size:30px;font-weight:800;margin-top:8px;letter-spacing:-0.02em;}
+    .stat-sub{font-size:12.5px;color:#16a34a;font-weight:600;margin-top:4px;}
+    .stat-sub.warn{color:#ffb65a;}
+
+    .cols{display:grid;grid-template-columns:1fr 300px;gap:20px;align-items:start;}
+    .panel{background:#fff;border:1px solid #e4e1f5;border-radius:14px;overflow:hidden;}
+    .panel-head{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border-bottom:1px solid #e4e1f5;}
+    .panel-title{font-size:15px;font-weight:800;}
+
+    table{width:100%;border-collapse:collapse;font-size:13.5px;}
+    th{text-align:left;padding:10px 22px;font-size:11.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#8b90a8;border-bottom:1px solid #e4e1f5;}
+    td{padding:14px 22px;border-bottom:1px solid #f1f3f8;vertical-align:middle;}
+    tr:last-child td{border-bottom:none;}
+    .who{font-weight:700;}
+    .snippet{color:#8b90a8;font-size:12.5px;margin-top:2px;max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+
+    .badge{display:inline-flex;align-items:center;height:24px;padding:0 10px;border-radius:999px;font-size:11.5px;font-weight:700;}
+    .b-purple{background:#ece9fb;color:#6c5ce7;}
+    .b-orange{background:#fff2e0;color:#c9760a;}
+    .b-green{background:#e7f8ed;color:#16a34a;}
+
+    .qa{padding:14px;display:flex;flex-direction:column;gap:10px;}
+    .qa-btn{display:flex;align-items:center;gap:10px;height:46px;padding:0 14px;border-radius:10px;border:1px solid #e4e1f5;font-size:13.5px;font-weight:700;color:#1b1f3b;}
+    .qa-btn.primary{border:none;background:linear-gradient(135deg,#6c5ce7,#4b3fc4);color:#fff;}
+  </style>
+</helmet>
+
+<div class="shell">
+
+  <!-- Sidebar -->
+  <div class="side">
+    <div class="brand"><div class="mark"></div><div class="bname">Shivi Electronics<small>Admin Panel</small></div></div>
+
+    <div class="navgroup">Overview</div>
+    <div class="nav-item active"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>Dashboard</div>
+
+    <div class="navgroup">Catalogue</div>
+    <div class="nav-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Products</div>
+
+    <div class="navgroup">Customers</div>
+    <div class="nav-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20a7 7 0 0 1 14 0"/><circle cx="10" cy="8" r="4"/><path d="M17 11a4 4 0 0 0 0-8"/><path d="M21 20a6.5 6.5 0 0 0-4-6"/></svg>Enquiries &amp; Leads</div>
+
+    <div class="navgroup">Site</div>
+    <div class="nav-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V6a2 2 0 0 1 2-2h8l6 6v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 4v5h5"/></svg>Content</div>
+    <div class="nav-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 0 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.7 1.7 0 0 0 .34-1.87 1.7 1.7 0 0 0-1.55-1H3a2 2 0 0 1 0-4h.09a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.87.34H9a1.7 1.7 0 0 0 1-1.55V3a2 2 0 0 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87V9a1.7 1.7 0 0 0 1.55 1H21a2 2 0 0 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1z"/></svg>Settings</div>
+
+    <div class="side-foot">
+      <div class="avatar">SE</div>
+      <div><div class="uname">Site Admin</div><div class="urole">shivielectronicsyst@gmail.com</div></div>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <div class="main">
+    <div class="topbar">
+      <div class="title">Dashboard</div>
+      <div class="search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#8b90a8" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Search enquiries, products…</div>
+      <div class="top-right">
+        <div class="bell"><div class="dot"></div><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#565b78" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6"/><path d="M10 20a2 2 0 0 0 4 0"/></svg></div>
+        <div class="avatar">SE</div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="stats">
+        <div class="stat"><div class="stat-label">Total Products</div><div class="stat-val">42</div><div class="stat-sub">3 series · Alpha / Beta / Gama</div></div>
+        <div class="stat"><div class="stat-label">New Enquiries (7d)</div><div class="stat-val">18</div><div class="stat-sub">+6 vs last week</div></div>
+        <div class="stat"><div class="stat-label">Pending Service Requests</div><div class="stat-val">5</div><div class="stat-sub warn">2 awaiting site survey</div></div>
+        <div class="stat"><div class="stat-label">Warranty Registrations</div><div class="stat-val">63</div><div class="stat-sub">Since launch</div></div>
+      </div>
+
+      <div class="cols">
+        <div class="panel">
+          <div class="panel-head"><div class="panel-title">Recent enquiries</div><a href="#" style="font-size:13px;font-weight:700;">View all</a></div>
+          <table>
+            <tr><th>From</th><th>Type</th><th>Date</th><th>Status</th></tr>
+            <tr><td><div class="who">Rajesh Khanna</div><div class="snippet">Need 40 kVA online UPS for print unit</div></td><td><span class="badge b-purple">Quote Request</span></td><td>16 Sep</td><td><span class="badge b-purple">New</span></td></tr>
+            <tr><td><div class="who">Meera Textiles</div><div class="snippet">Stabilizer tripping under load</div></td><td><span class="badge b-orange">Service Request</span></td><td>15 Sep</td><td><span class="badge b-orange">In Progress</span></td></tr>
+            <tr><td><div class="who">Amit Verma</div><div class="snippet">Site survey for new branch office</div></td><td><span class="badge b-green">Site Survey</span></td><td>15 Sep</td><td><span class="badge b-green">Resolved</span></td></tr>
+            <tr><td><div class="who">Kavya Diagnostics</div><div class="snippet">Warranty registration — Beta 15kVA</div></td><td><span class="badge b-purple">Warranty</span></td><td>14 Sep</td><td><span class="badge b-green">Resolved</span></td></tr>
+            <tr><td><div class="who">Sunil Prakash</div><div class="snippet">General product question</div></td><td><span class="badge b-purple">Contact</span></td><td>13 Sep</td><td><span class="badge b-orange">In Progress</span></td></tr>
+          </table>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><div class="panel-title">Quick actions</div></div>
+          <div class="qa">
+            <div class="qa-btn primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Add product</div>
+            <div class="qa-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20a7 7 0 0 1 14 0"/><circle cx="10" cy="8" r="4"/></svg>View all enquiries</div>
+            <div class="qa-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M3 17v2a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-2"/></svg>Export warranty list</div>
+            <div class="qa-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V6a2 2 0 0 1 2-2h8l6 6v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/></svg>Edit site content</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>

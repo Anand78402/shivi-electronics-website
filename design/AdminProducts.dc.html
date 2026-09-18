@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    *{box-sizing:border-box;}
+    body{margin:0;background:#f6f5fc;color:#1b1f3b;font-family:"Segoe UI","Inter",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;}
+    a{color:#6c5ce7;text-decoration:none;} a:hover{color:#4b3fc4;}
+    .shell{display:flex;min-height:1040px;}
+
+    .side{width:250px;flex-shrink:0;background:#1b1f3b;color:#fff;display:flex;flex-direction:column;padding:22px 16px;}
+    .brand{display:flex;align-items:center;gap:10px;padding:6px 8px 26px;}
+    .mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#6c5ce7,#ffb65a);flex-shrink:0;}
+    .bname{font-weight:800;font-size:14.5px;letter-spacing:-0.01em;line-height:1.25;color:#fff;}
+    .bname small{display:block;font-weight:600;font-size:10.5px;color:#b6adf5;letter-spacing:0.06em;text-transform:uppercase;}
+    .navgroup{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6a70a0;margin:18px 10px 8px;}
+    .nav-item{display:flex;align-items:center;gap:12px;height:42px;padding:0 12px;border-radius:8px;font-size:14px;font-weight:600;color:#c6c9e6;margin-bottom:2px;}
+    .nav-item.active{background:linear-gradient(135deg,#6c5ce7,#4b3fc4);color:#fff;}
+    .side-foot{margin-top:auto;display:flex;align-items:center;gap:10px;padding:14px 10px 6px;border-top:1px solid #2c3157;}
+    .avatar{width:34px;height:34px;border-radius:999px;background:#ffb65a;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:#1b1f3b;flex-shrink:0;}
+    .uname{font-size:13px;font-weight:700;color:#fff;line-height:1.3;}
+    .urole{font-size:11.5px;color:#9aa0cc;}
+
+    .main{flex:1;min-width:0;}
+    .topbar{height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:#fff;border-bottom:1px solid #e4e1f5;}
+    .title{font-size:20px;font-weight:800;letter-spacing:-0.01em;}
+    .search{width:280px;height:40px;border:1px solid #e4e1f5;border-radius:999px;background:#f6f5fc;display:flex;align-items:center;gap:8px;padding:0 16px;color:#8b90a8;font-size:13.5px;}
+    .top-right{display:flex;align-items:center;gap:16px;}
+    .btn{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 18px;border-radius:999px;font-weight:700;font-size:13.5px;border:none;background:linear-gradient(135deg,#6c5ce7,#4b3fc4);color:#fff;box-shadow:0 10px 30px -10px rgba(75,63,196,0.35);}
+    .content{padding:28px 32px 40px;}
+
+    .chips{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap;}
+    .chip{height:34px;display:flex;align-items:center;padding:0 16px;border-radius:999px;font-size:13px;font-weight:700;border:1px solid #e4e1f5;color:#565b78;background:#fff;}
+    .chip.active{background:#1b1f3b;color:#fff;border-color:#1b1f3b;}
+
+    .panel{background:#fff;border:1px solid #e4e1f5;border-radius:14px;overflow:hidden;}
+    table{width:100%;border-collapse:collapse;font-size:13.5px;}
+    th{text-align:left;padding:12px 22px;font-size:11.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#8b90a8;border-bottom:1px solid #e4e1f5;}
+    td{padding:14px 22px;border-bottom:1px solid #f1f3f8;vertical-align:middle;}
+    tr:last-child td{border-bottom:none;}
+    .prod{display:flex;align-items:center;gap:12px;}
+    .thumb{width:44px;height:44px;border-radius:8px;background:#f1f3f8;flex-shrink:0;}
+    .pname{font-weight:700;}
+    .pmeta{font-size:12px;color:#8b90a8;margin-top:2px;}
+    .badge{display:inline-flex;align-items:center;height:24px;padding:0 10px;border-radius:999px;font-size:11.5px;font-weight:700;}
+    .b-green{background:#e7f8ed;color:#16a34a;}
+    .b-gray{background:#f1f3f8;color:#565b78;}
+    .actions{display:flex;gap:8px;}
+    .iconbtn{width:32px;height:32px;border-radius:8px;border:1px solid #e4e1f5;display:flex;align-items:center;justify-content:center;color:#565b78;}
+    .iconbtn.danger{color:#dc2626;border-color:#f6d3d3;}
+  </style>
+</helmet>
+
+<div class="shell">
+  <div class="side">
+    <div class="brand"><div class="mark"></div><div class="bname">Shivi Electronics<small>Admin Panel</small></div></div>
+
+    <div class="navgroup">Overview</div>
+    <div class="nav-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>Dashboard</div>
+
+    <div class="navgroup">Catalogue</div>
+    <div class="nav-item active"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Products</div>
+
+    <div class="navgroup">Customers</div>
+    <div class="nav-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20a7 7 0 0 1 14 0"/><circle cx="10" cy="8" r="4"/><path d="M17 11a4 4 0 0 0 0-8"/><path d="M21 20a6.5 6.5 0 0 0-4-6"/></svg>Enquiries &amp; Leads</div>
+
+    <div class="navgroup">Site</div>
+    <div class="nav-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V6a2 2 0 0 1 2-2h8l6 6v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 4v5h5"/></svg>Content</div>
+    <div class="nav-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 0 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.7 1.7 0 0 0 .34-1.87 1.7 1.7 0 0 0-1.55-1H3a2 2 0 0 1 0-4h.09a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.87.34H9a1.7 1.7 0 0 0 1-1.55V3a2 2 0 0 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87V9a1.7 1.7 0 0 0 1.55 1H21a2 2 0 0 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1z"/></svg>Settings</div>
+
+    <div class="side-foot"><div class="avatar">SE</div><div><div class="uname">Site Admin</div><div class="urole">shivielectronicsyst@gmail.com</div></div></div>
+  </div>
+
+  <div class="main">
+    <div class="topbar">
+      <div class="title">Products</div>
+      <div class="search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#8b90a8" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Search products…</div>
+      <div class="top-right"><div class="btn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Add product</div></div>
+    </div>
+
+    <div class="content">
+      <div class="chips">
+        <div class="chip active">All (42)</div>
+        <div class="chip">Online UPS</div>
+        <div class="chip">Inverters</div>
+        <div class="chip">Stabilizers</div>
+        <div class="chip">Solar</div>
+        <div class="chip">Batteries</div>
+      </div>
+
+      <div class="panel">
+        <table>
+          <tr><th>Product</th><th>Category</th><th>Range</th><th>Status</th><th></th></tr>
+          <tr>
+            <td><div class="prod"><div class="thumb"></div><div><div class="pname">Alpha Series Online UPS</div><div class="pmeta">1Ø – 1Ø, double conversion</div></div></div></td>
+            <td>Online UPS</td><td>1–40 kVA</td><td><span class="badge b-green">Published</span></td>
+            <td><div class="actions"><div class="iconbtn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div><div class="iconbtn danger"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg></div></div></td>
+          </tr>
+          <tr>
+            <td><div class="prod"><div class="thumb"></div><div><div class="pname">Beta Series Online UPS</div><div class="pmeta">3Ø – 1Ø, double conversion</div></div></div></td>
+            <td>Online UPS</td><td>5–60 kVA</td><td><span class="badge b-green">Published</span></td>
+            <td><div class="actions"><div class="iconbtn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div><div class="iconbtn danger"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg></div></div></td>
+          </tr>
+          <tr>
+            <td><div class="prod"><div class="thumb"></div><div><div class="pname">Gama Series Online UPS</div><div class="pmeta">3Ø – 3Ø, double conversion</div></div></div></td>
+            <td>Online UPS</td><td>10–300 kVA</td><td><span class="badge b-green">Published</span></td>
+            <td><div class="actions"><div class="iconbtn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div><div class="iconbtn danger"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg></div></div></td>
+          </tr>
+          <tr>
+            <td><div class="prod"><div class="thumb"></div><div><div class="pname">Sine Wave Inverter — Lift Backup</div><div class="pmeta">Pure sine wave, lift applications</div></div></div></td>
+            <td>Inverters</td><td>2–10 kVA</td><td><span class="badge b-green">Published</span></td>
+            <td><div class="actions"><div class="iconbtn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div><div class="iconbtn danger"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg></div></div></td>
+          </tr>
+          <tr>
+            <td><div class="prod"><div class="thumb"></div><div><div class="pname">Servo Controlled Voltage Stabilizer</div><div class="pmeta">Single &amp; three phase</div></div></div></td>
+            <td>Stabilizers</td><td>1–500 kVA</td><td><span class="badge b-green">Published</span></td>
+            <td><div class="actions"><div class="iconbtn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div><div class="iconbtn danger"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg></div></div></td>
+          </tr>
+          <tr>
+            <td><div class="prod"><div class="thumb"></div><div><div class="pname">3-Phase Oil Cooled Stabilizer</div><div class="pmeta">Industrial, oil-immersed</div></div></div></td>
+            <td>Stabilizers</td><td>25–1000 kVA</td><td><span class="badge b-gray">Draft</span></td>
+            <td><div class="actions"><div class="iconbtn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div><div class="iconbtn danger"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg></div></div></td>
+          </tr>
+          <tr>
+            <td><div class="prod"><div class="thumb"></div><div><div class="pname">Tubular Battery Bank</div><div class="pmeta">Deep-cycle backup storage</div></div></div></td>
+            <td>Batteries</td><td>100–220 Ah</td><td><span class="badge b-green">Published</span></td>
+            <td><div class="actions"><div class="iconbtn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div><div class="iconbtn danger"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg></div></div></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>
