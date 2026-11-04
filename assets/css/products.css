@@ -3,30 +3,6 @@
    Loaded after style.css + site.css on products.html only.
    ========================================================================== */
 
-/* ---------- Hero ---------- */
-.page-hero.pr-hero {
-  position: relative; overflow: hidden; color: #fff; padding: 64px 0 56px; border-bottom: 0;
-  background:
-    radial-gradient(700px 380px at 90% 0%, rgba(59, 130, 246, .22), transparent 62%),
-    radial-gradient(500px 340px at 0% 110%, rgba(241, 107, 8, .14), transparent 60%),
-    linear-gradient(160deg, var(--purple-deep) 0%, var(--purple) 60%, var(--purple-deep) 100%);
-}
-.pr-hero::before {
-  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .08;
-  background-image: linear-gradient(#60a5fa 1px, transparent 1px), linear-gradient(90deg, #60a5fa 1px, transparent 1px);
-  background-size: 48px 48px;
-  -webkit-mask-image: linear-gradient(to bottom, #000, transparent 90%); mask-image: linear-gradient(to bottom, #000, transparent 90%);
-}
-.pr-hero .container { position: relative; z-index: 1; }
-.pr-hero .breadcrumb, .pr-hero .breadcrumb a { color: #a9b8e0; }
-.pr-hero .breadcrumb a:hover { color: #fff; }
-.pr-hero .eyebrow { color: #ffd7b0; }
-.pr-hero .eyebrow::before { background: var(--orange); }
-.pr-hero h1 { color: #fff; font-size: clamp(32px, 4.6vw, 52px); font-weight: 800; letter-spacing: -0.02em; max-width: 780px; }
-.pr-hero h1 .accent { color: #ffb27a; }
-.pr-hero p { color: #d3dcf5; font-size: 17.5px; max-width: 640px; }
-.pr-hero .hero-actions { margin-top: 26px; }
-
 /* ---------- Sticky jump bar ---------- */
 .pr-jump { position: sticky; top: var(--header-h); z-index: 80; background: rgba(255, 255, 255, .92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
 .pr-jump .container { display: flex; align-items: center; gap: 8px; overflow-x: auto; scrollbar-width: none; padding-top: 10px; padding-bottom: 10px; }
@@ -38,10 +14,6 @@
 }
 .pr-jump a:hover { color: var(--purple); background: #eef2fb; }
 .pr-jump a.on { background: var(--purple); color: #fff; }
-
-.pr-section h2, .pr-hero h1 { line-height: 1.15; }
-.pr-section { padding: 72px 0; scroll-margin-top: calc(var(--header-h) + 52px); }
-.pr-section.alt { background: var(--bg-alt); }
 
 /* ---------- UPS series tabs ---------- */
 .pr-tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 26px; }
@@ -130,34 +102,17 @@
 .pr-cat-actions .btn { flex: 1; border-radius: 10px; padding: 12px 14px; font-size: 14px; }
 .pr-onreq { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #9a4a0a; background: #fff3e8; border: 1px solid #f6dcc3; border-radius: 999px; padding: 3px 10px; margin-bottom: 10px; align-self: flex-start; }
 
-/* ---------- Quote form ---------- */
-.pr-quote { display: grid; grid-template-columns: .9fr 1.1fr; border-radius: 24px; overflow: hidden; border: 1px solid #dbe2ef; box-shadow: var(--shadow); background: #fff; }
-.pr-quote-side { padding: 38px; color: #fff; background: radial-gradient(420px 240px at 100% 0%, rgba(241, 107, 8, .25), transparent 60%), linear-gradient(160deg, var(--purple-deep), var(--purple)); }
-.pr-quote-side h2 { color: #fff; font-size: clamp(24px, 3vw, 32px); }
-.pr-quote-side p { color: #d3dcf5; }
-.pr-quote-side ul { display: grid; gap: 12px; margin: 20px 0 26px; }
-.pr-quote-side li { display: flex; gap: 10px; color: #eaf0ff; font-size: 14.5px; align-items: flex-start; }
-.pr-quote-side li .icon { width: 18px; height: 18px; color: #ffb27a; flex-shrink: 0; margin-top: 2px; }
-.pr-quote-side .ph a { display: block; color: #fff; font-weight: 700; font-size: 18px; font-family: "JetBrains Mono", ui-monospace, Consolas, monospace; }
-.pr-quote-form { padding: 38px; }
-.pr-quote-form h3 { font-size: 20px; margin-bottom: 18px; }
-
 /* ---------- Responsive ---------- */
 @media (max-width: 980px) {
   .pr-panel { grid-template-columns: 1fr; }
   .pr-side { position: static; max-width: 460px; }
   .pr-cat-grid { grid-template-columns: 1fr; }
-  .pr-quote { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
-  .page-hero.pr-hero { padding: 44px 0 40px; }
-  .pr-section { padding: 52px 0; }
   .pr-tabs { grid-template-columns: 1fr; gap: 8px; }
   .pr-tab { flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap; }
   .pr-feats { grid-template-columns: 1fr; }
   .pr-spec th, .pr-spec td { padding: 9px 12px; }
   .pr-spec tbody th[scope="row"] { width: 50%; }
-  .pr-quote-side, .pr-quote-form { padding: 26px 20px; }
   .pr-cat { padding: 20px; }
-  .form-row { grid-template-columns: 1fr; }
 }
