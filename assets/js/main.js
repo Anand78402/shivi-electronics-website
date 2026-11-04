@@ -271,8 +271,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // visitor has already submitted the enquiry popup at least once.
     var alreadySubmitted = false;
     try { alreadySubmitted = !!localStorage.getItem('shiviEnquirySubmitted'); } catch (e) {}
-    if (!alreadySubmitted) {
-      setTimeout(function () { openPopup('Quick Enquiry'); }, 1200);
+    // ...and only once per browser session, so it doesn't nag on every page.
+    var shownThisSession = false;
+    try { shownThisSession = !!sessionStorage.getItem('shiviPopupShown'); } catch (e) {}
+    if (!alreadySubmitted && !shownThisSession) {
+      setTimeout(function () {
+        openPopup('Quick Enquiry');
+        try { sessionStorage.setItem('shiviPopupShown', '1'); } catch (e) {}
+      }, 1200);
     }
   }
 
