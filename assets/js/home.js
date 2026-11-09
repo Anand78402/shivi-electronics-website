@@ -3,9 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
   var WA_NUMBER = '919457274772';
 
   var SERIES = {
-    alpha: { name: 'Alpha', phase: '1Ø – 1Ø', min: 1,  max: 40,  cabinet: 'Black tower',            img: 'assets/img/product-alpha.png', alt: 'Shivi Alpha series single-phase online UPS' },
-    beta:  { name: 'Beta',  phase: '3Ø – 1Ø', min: 5,  max: 60,  cabinet: 'White tower',            img: 'assets/img/product-beta.png',  alt: 'Shivi Beta series three-phase input online UPS' },
-    gama:  { name: 'Gama',  phase: '3Ø – 3Ø', min: 10, max: 300, cabinet: 'White, fan-cooled',      img: 'assets/img/product-gama.png',  alt: 'Shivi Gama series three-phase online UPS' }
+    alpha: { name: 'Alpha', phase: '1Ø – 1Ø', min: 1,  max: 15,  cabinet: 'Black tower',            img: 'assets/img/alpha-front.webp', alt: 'Shivi Alpha series single-phase online UPS' },
+    beta:  { name: 'Beta',  phase: '3Ø – 1Ø', min: 5,  max: 100,  cabinet: 'White tower',            img: 'assets/img/beta-front.webp',  alt: 'Shivi Beta series three-phase input online UPS' },
+    gama:  { name: 'Gama',  phase: '3Ø – 3Ø', min: 5,  max: 300, cabinet: 'White, fan-cooled',      img: 'assets/img/gama-front.webp',  alt: 'Shivi Gama series three-phase online UPS' },
+    parts: { name: 'Control cards', parts: true, alt: 'Electronic control card' }
   };
 
   /* ---------- Hero series showcase ---------- */
@@ -18,10 +19,47 @@ document.addEventListener('DOMContentLoaded', function () {
       range: document.getElementById('hmRange'),
       cabinet: document.getElementById('hmCabinet')
     };
+    var specsBox = document.getElementById('hmSpecs');
+    var dotsBox = document.getElementById('hmDots');
+    var BOARDS = [1, 2, 3, 4, 5, 6, 7, 8, 9].map(function (n) { return 'assets/img/electronics/e' + n + '.webp'; });
+    var boardIdx = 0, boardTimer = null;
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function showBoard(i) {
+      boardIdx = (i + BOARDS.length) % BOARDS.length;
+      photo.src = BOARDS[boardIdx];
+      photo.alt = 'Electronic control card photo ' + (boardIdx + 1) + ' of ' + BOARDS.length;
+      Array.prototype.forEach.call(dotsBox.children, function (d, k) { d.setAttribute('aria-current', String(k === boardIdx)); });
+    }
+    function stopBoards() { if (boardTimer) { clearInterval(boardTimer); boardTimer = null; } }
+    function startBoards() {
+      stopBoards();
+      if (!reduceMotion) boardTimer = setInterval(function () { showBoard(boardIdx + 1); }, 3200);
+    }
+    if (dotsBox) {
+      BOARDS.forEach(function (_, k) {
+        var d = document.createElement('button');
+        d.type = 'button'; d.setAttribute('aria-label', 'Show photo ' + (k + 1));
+        d.addEventListener('click', function () { showBoard(k); startBoards(); });
+        dotsBox.appendChild(d);
+      });
+      photo.parentNode.addEventListener('mouseenter', stopBoards);
+      photo.parentNode.addEventListener('mouseleave', function () { if (photo.classList.contains('is-board')) startBoards(); });
+    }
     var select = function (key) {
       var s = SERIES[key];
       if (!s) return;
       tabs.forEach(function (t) { t.setAttribute('aria-selected', String(t.dataset.series === key)); });
+      if (s.parts) {
+        photo.classList.add('is-board');
+        photo.removeAttribute('width'); photo.removeAttribute('height');
+        tag.textContent = s.name;
+        specsBox.hidden = true; dotsBox.hidden = false;
+        showBoard(0); startBoards();
+        return;
+      }
+      stopBoards();
+      photo.classList.remove('is-board');
+      specsBox.hidden = false; dotsBox.hidden = true;
       photo.src = s.img;
       photo.alt = s.alt;
       tag.textContent = s.name + ' Series';

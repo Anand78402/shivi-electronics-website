@@ -1,6 +1,18 @@
 // Shivi Electronics System — Products page behaviour (UPS series tabs + sticky jump bar)
 document.addEventListener('DOMContentLoaded', function () {
 
+  /* ---------- Photo gallery (front / back thumbnails) ---------- */
+  document.querySelectorAll('[data-gallery]').forEach(function (g) {
+    var main = g.querySelector('.pr-gallery-main');
+    var thumbs = g.querySelectorAll('.pr-thumb');
+    thumbs.forEach(function (t) {
+      t.addEventListener('click', function () {
+        main.src = t.dataset.src; main.alt = t.dataset.alt;
+        thumbs.forEach(function (o) { o.setAttribute('aria-pressed', String(o === t)); });
+      });
+    });
+  });
+
   /* ---------- UPS series tabs (deep-linkable: #alpha / #beta / #gama) ---------- */
   var tabs = Array.prototype.slice.call(document.querySelectorAll('.pr-tab'));
   var panels = Array.prototype.slice.call(document.querySelectorAll('.pr-panel'));

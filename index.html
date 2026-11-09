@@ -26,7 +26,7 @@
   "name": "Shivi Electronics System",
   "url": "https://anand78402.github.io/shivi-electronics-website/",
   "logo": "https://anand78402.github.io/shivi-electronics-website/assets/img/logo.png",
-  "email": "shivielectronicsyst@gmail.com",
+  "email": "shivielectronicssyst@gmail.com",
   "telephone": ["+91 94572 74772", "+91 97608 36204"],
   "address": [
     { "@type": "PostalAddress", "streetAddress": "734 Tulsi Vihar", "addressLocality": "Dadri", "postalCode": "203207", "addressRegion": "Uttar Pradesh", "addressCountry": "IN" },
@@ -132,6 +132,7 @@
 
 <!-- ===================== HERO ===================== -->
 <section class="hero hm-hero">
+  <div class="hm-bg" aria-hidden="true"></div>
   <div class="container hero-grid">
     <div>
       <div class="eyebrow">Manufactured in Dadri &amp; Greater Noida</div>
@@ -165,14 +166,16 @@
         <button class="hm-tab" role="tab" data-series="alpha" aria-selected="false" type="button">Alpha</button>
         <button class="hm-tab" role="tab" data-series="beta" aria-selected="false" type="button">Beta</button>
         <button class="hm-tab" role="tab" data-series="gama" aria-selected="true" type="button">Gama</button>
+        <button class="hm-tab" role="tab" data-series="parts" aria-selected="false" type="button">Control cards</button>
       </div>
       <div class="hm-photo">
         <span class="hm-tag" id="hmTag">Gama Series</span>
-        <img id="hmPhoto" src="assets/img/product-gama.png" alt="Shivi Gama series three-phase online UPS" width="200" height="280">
+        <img id="hmPhoto" src="assets/img/gama-front.webp" alt="Shivi Gama series three-phase online UPS" width="557" height="760">
+        <div class="hm-dots" id="hmDots" role="group" aria-label="Control card photos" hidden></div>
       </div>
-      <dl class="hm-specs">
+      <dl class="hm-specs" id="hmSpecs">
         <div><dt>Phase</dt><dd class="mono" id="hmPhase">3&Oslash; &ndash; 3&Oslash;</dd></div>
-        <div><dt>Rating</dt><dd class="mono" id="hmRange">10 &ndash; 300 kVA</dd></div>
+        <div><dt>Rating</dt><dd class="mono" id="hmRange">5 &ndash; 300 kVA</dd></div>
         <div><dt>Topology</dt><dd>Double conversion</dd></div>
         <div><dt>Cabinet</dt><dd id="hmCabinet">White, fan-cooled</dd></div>
       </dl>
@@ -203,11 +206,11 @@
       <article class="hm-scard reveal">
         <div class="hm-scard-photo">
           <span class="hm-badge mono">1&Oslash; &ndash; 1&Oslash;</span>
-          <img src="assets/img/product-alpha.png" alt="Shivi Alpha series single-phase online UPS" width="205" height="280" loading="lazy">
+          <img src="assets/img/alpha-front.webp" alt="Shivi Alpha series single-phase online UPS" width="483" height="760" loading="lazy">
         </div>
         <div class="hm-scard-body">
           <h3>Alpha Series</h3>
-          <div class="hm-range mono">1 &ndash; 40 kVA</div>
+          <div class="hm-range mono">1 &ndash; 15 kVA</div>
           <p>Single-phase in, single-phase out &mdash; for offices, shops, labs and small server rooms.</p>
           <ul class="hm-list">
             <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>DSP double-conversion online UPS</li>
@@ -226,11 +229,11 @@
       <article class="hm-scard reveal">
         <div class="hm-scard-photo">
           <span class="hm-badge mono">3&Oslash; &ndash; 1&Oslash;</span>
-          <img src="assets/img/product-beta.png" alt="Shivi Beta series three-phase input online UPS" width="220" height="280" loading="lazy">
+          <img src="assets/img/beta-front.webp" alt="Shivi Beta series three-phase input online UPS" width="607" height="760" loading="lazy">
         </div>
         <div class="hm-scard-body">
           <h3>Beta Series</h3>
-          <div class="hm-range mono">5 &ndash; 60 kVA</div>
+          <div class="hm-range mono">5 &ndash; 100 kVA</div>
           <p>Three-phase in, single-phase out &mdash; for single-phase loads fed from a three-phase supply.</p>
           <ul class="hm-list">
             <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>DSP double-conversion online UPS</li>
@@ -249,11 +252,11 @@
       <article class="hm-scard reveal">
         <div class="hm-scard-photo">
           <span class="hm-badge mono">3&Oslash; &ndash; 3&Oslash;</span>
-          <img src="assets/img/product-gama.png" alt="Shivi Gama series three-phase online UPS" width="200" height="280" loading="lazy">
+          <img src="assets/img/gama-front.webp" alt="Shivi Gama series three-phase online UPS" width="557" height="760" loading="lazy">
         </div>
         <div class="hm-scard-body">
           <h3>Gama Series</h3>
-          <div class="hm-range mono">10 &ndash; 300 kVA</div>
+          <div class="hm-range mono">5 &ndash; 300 kVA</div>
           <p>Three-phase in and out &mdash; for factories, large IT loads and heavy equipment.</p>
           <ul class="hm-list">
             <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>DSP double-conversion online UPS</li>
@@ -357,7 +360,7 @@
         <dl>
           <div><dt>Configuration</dt><dd class="mono" id="resPhase">1&Oslash; &ndash; 1&Oslash;</dd></div>
           <div><dt>Suggested rating</dt><dd class="mono" id="resRating">&asymp; 13 kVA</dd></div>
-          <div><dt>Series range</dt><dd class="mono" id="resRange">1 &ndash; 40 kVA</dd></div>
+          <div><dt>Series range</dt><dd class="mono" id="resRange">1 &ndash; 15 kVA</dd></div>
         </dl>
         <a class="btn btn-accent" id="resWa" href="https://wa.me/919457274772" target="_blank" rel="noopener">Get this quote on WhatsApp</a>
         <a class="btn btn-light" href="contact.html" data-open-enquiry="UPS Selector">Request a callback</a>
@@ -487,10 +490,10 @@
       <div>
         <h4>Head Office</h4>
         <ul>
-          <li>Branch: Khas-225, Khera Chauganpur, Gr. Noida, U.P. 201306<br>Corp. Office: 734, Tulsi Vihar, Dadri 203207</li>
+          <li>Office: Khas-225, Khera Chauganpur, Gr. Noida, U.P. 201306</li>
           <li><a href="tel:+919457274772">+91 94572 74772</a> (24 hrs)</li>
           <li><a href="tel:+919760836204">+91 97608 36204</a></li>
-          <li><a href="mailto:shivielectronicsyst@gmail.com">shivielectronicsyst@gmail.com</a></li>
+          <li><a href="mailto:shivielectronicssyst@gmail.com">shivielectronicssyst@gmail.com</a></li>
         </ul>
       </div>
     </div>
@@ -549,7 +552,7 @@
       </div>
       <div class="form-fail" role="alert">
         <svg class="icon icon-sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>
-        <span>Something went wrong. Please call <a href="tel:+919457274772">+91 94572 74772</a> or email <a href="mailto:shivielectronicsyst@gmail.com">shivielectronicsyst@gmail.com</a> directly.</span>
+        <span>Something went wrong. Please call <a href="tel:+919457274772">+91 94572 74772</a> or email <a href="mailto:shivielectronicssyst@gmail.com">shivielectronicssyst@gmail.com</a> directly.</span>
       </div>
     </form>
   </div>
