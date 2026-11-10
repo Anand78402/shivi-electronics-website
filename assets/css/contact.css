@@ -6,11 +6,11 @@
 /* ---------- Quick contact cards ---------- */
 .ct-quick { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: -34px; position: relative; z-index: 3; }
 .ct-qcard {
-  display: flex; flex-direction: column; gap: 4px; background: #fff; border: 1px solid #efe4db; border-radius: 16px; padding: 20px;
-  box-shadow: 0 10px 28px -12px rgba(49, 27, 10, .2); transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+  display: flex; flex-direction: column; gap: 4px; background: #fff; border: 1px solid #dbe2ef; border-radius: 16px; padding: 20px;
+  box-shadow: 0 10px 28px -12px rgba(10, 25, 49, .2); transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
 }
-a.ct-qcard:hover { transform: translateY(-3px); border-color: #f5bd93; box-shadow: 0 16px 34px -10px rgba(103, 45, 1, .22); }
-.ct-qico { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; background: linear-gradient(135deg, #fbf4ee, #fff3e8); color: var(--purple); }
+a.ct-qcard:hover { transform: translateY(-3px); border-color: #93b4f5; box-shadow: 0 16px 34px -10px rgba(1, 31, 103, .22); }
+.ct-qico { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; background: linear-gradient(135deg, #eef2fb, #fff3e8); color: var(--purple); }
 .ct-qico .icon { width: 22px; height: 22px; }
 .ct-qcard.wa .ct-qico { background: #e8f9ef; color: #1da851; }
 .ct-qcard.wa .ct-qico .icon { fill: currentColor; stroke: none; }
@@ -21,14 +21,14 @@ a.ct-qcard:hover { transform: translateY(-3px); border-color: #f5bd93; box-shado
 
 /* ---------- Form + offices ---------- */
 .ct-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 28px; align-items: start; }
-.ct-form-card { background: #fff; border: 1px solid #efe4db; border-radius: 22px; padding: 34px; box-shadow: var(--shadow); }
+.ct-form-card { background: #fff; border: 1px solid #dbe2ef; border-radius: 22px; padding: 34px; box-shadow: var(--shadow); }
 .ct-form-card h2 { font-size: clamp(24px, 3vw, 30px); margin-bottom: 6px; }
 .ct-form-card > p { font-size: 15px; }
 .ct-tip { display: flex; gap: 10px; padding: 12px 14px; border-radius: 12px; background: #fff8f1; border: 1px solid #f6dcc3; font-size: 13.5px; color: #7a4a1b; margin: 4px 0 20px; }
 .ct-tip .icon { width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px; color: var(--orange); }
 .ct-tip strong { color: #5f3610; }
 
-.ct-office { background: #fff; border: 1px solid #efe4db; border-radius: 18px; overflow: hidden; box-shadow: 0 4px 16px -2px rgba(49, 27, 10, .05); }
+.ct-office { background: #fff; border: 1px solid #dbe2ef; border-radius: 18px; overflow: hidden; box-shadow: 0 4px 16px -2px rgba(10, 25, 49, .05); }
 .ct-office + .ct-office { margin-top: 18px; }
 .ct-office-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 14px 20px; color: #fff; background: linear-gradient(160deg, var(--purple-deep), var(--purple)); }
 .ct-office-head h3 { color: #fff; font-size: 17px; margin: 0; }
@@ -40,7 +40,7 @@ a.ct-qcard:hover { transform: translateY(-3px); border-color: #f5bd93; box-shado
 .ct-office-acts .btn { flex: 1; min-width: 130px; border-radius: 10px; padding: 11px 14px; font-size: 13.5px; }
 .ct-office-acts .btn-outline { background: #fff; border: 1.5px solid var(--purple); color: var(--purple); }
 .ct-office-acts .btn-outline:hover { background: var(--purple); color: #fff; }
-.ct-mail { margin-top: 18px; padding: 18px 20px; border-radius: 18px; background: #fcfaf8; border: 1px solid #f0e8e2; font-size: 14.5px; }
+.ct-mail { margin-top: 18px; padding: 18px 20px; border-radius: 18px; background: #f8fafc; border: 1px solid #e2e8f0; font-size: 14.5px; }
 .ct-mail strong { display: block; margin-bottom: 2px; }
 .ct-mail a { color: var(--purple); font-weight: 700; word-break: break-all; }
 
