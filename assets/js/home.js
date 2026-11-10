@@ -149,3 +149,12 @@ document.addEventListener('DOMContentLoaded', function () {
   form.addEventListener('submit', function (e) { e.preventDefault(); });
   update();
 });
+
+/* Transparent header over the hero; solid once the page scrolls */
+(function () {
+  var header = document.querySelector('.site-header');
+  if (!header) return;
+  function sync() { header.classList.toggle('is-scrolled', window.scrollY > 24); }
+  window.addEventListener('scroll', sync, { passive: true });
+  sync();
+})();

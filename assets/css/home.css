@@ -236,3 +236,30 @@
 .hm-dots button:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
 @media (max-width: 520px) { .hm-tab { font-size: 12px; padding-left: 4px; padding-right: 4px; } }
 .hm-specs[hidden] { display: none; }
+
+/* ---------- Transparent header overlaying the hero (home page only) ---------- */
+body:has(.hm-hero) .site-header {
+  position: fixed; top: 0; left: 0; right: 0;
+  background: transparent; backdrop-filter: none; -webkit-backdrop-filter: none;
+  border-bottom-color: transparent;
+  transition: background .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+/* hero now starts at the very top, behind the header */
+.hero.hm-hero { padding-top: calc(88px + var(--header-h)); }
+@media (max-width: 720px) { .hero.hm-hero { padding-top: calc(56px + var(--header-h)); } }
+
+/* light text while the header sits on the dark hero */
+body:has(.hm-hero) .site-header:not(.is-scrolled) .primary-nav a.nav-link { color: #fff; }
+body:has(.hm-hero) .site-header:not(.is-scrolled) .primary-nav a.nav-link:hover,
+body:has(.hm-hero) .site-header:not(.is-scrolled) .primary-nav li.active > a.nav-link { color: #fff; background: rgba(255, 255, 255, .16); }
+body:has(.hm-hero) .site-header:not(.is-scrolled) .header-phone,
+body:has(.hm-hero) .site-header:not(.is-scrolled) .header-phone strong { color: #fff; }
+body:has(.hm-hero) .site-header:not(.is-scrolled) .nav-toggle { background: rgba(255, 255, 255, .14); border-color: rgba(255, 255, 255, .45); color: #fff; }
+
+/* once the page scrolls, go back to a solid readable bar */
+body:has(.hm-hero) .site-header.is-scrolled {
+  background: rgba(255, 255, 255, .94);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom-color: var(--border);
+  box-shadow: 0 6px 24px -14px rgba(6, 15, 36, .35);
+}
