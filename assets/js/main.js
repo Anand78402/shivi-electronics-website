@@ -291,4 +291,12 @@ document.addEventListener('DOMContentLoaded', function () {
       if (li) li.classList.add('active');
     }
   });
+
+  // Transparent header over the hero; solid once the page scrolls
+  var siteHeader = document.querySelector('.site-header');
+  if (siteHeader) {
+    var syncHeader = function () { siteHeader.classList.toggle('is-scrolled', window.scrollY > 24); };
+    window.addEventListener('scroll', syncHeader, { passive: true });
+    syncHeader();
+  }
 });
