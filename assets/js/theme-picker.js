@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-  var STORAGE_KEY = 'shiviTheme';
+  var STORAGE_KEY = 'shiviTheme2';   // bumped so earlier saved choices don't override the Sunrise default
+  var DEFAULT_THEME = 4;             // Sunrise
   var themes = [
     { name: 'Navy Classic', purple: '#0a1f5c', purpleDeep: '#001b3d', orange: '#f47c0c' },
     { name: 'Electric Blue', purple: '#1a56db', purpleDeep: '#0f2f8c', orange: '#ff8a1e' },
@@ -60,5 +61,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var saved = null;
   try { saved = localStorage.getItem(STORAGE_KEY); } catch (e) {}
-  applyTheme(saved !== null ? parseInt(saved, 10) : 0);
+  applyTheme(saved !== null ? parseInt(saved, 10) : DEFAULT_THEME);
 });
