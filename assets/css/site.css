@@ -151,7 +151,7 @@ body:has(.hm-hero, .sub-hero) .site-header:not(.is-scrolled) .header-phone stron
 body:has(.hm-hero, .sub-hero) .site-header:not(.is-scrolled) .nav-toggle { background: rgba(255, 255, 255, .14); border-color: rgba(255, 255, 255, .45); color: #fff; }
 
 /* the logo is a transparent dark-navy PNG, so seat it on a white plate over the dark hero */
-body:has(.hm-hero, .sub-hero) .site-header:not(.is-scrolled) .brand-mark img { background: #fff; box-shadow: 0 6px 18px -8px rgba(6, 15, 36, .5); }
+body:has(.hm-hero, .sub-hero) .site-header:not(.is-scrolled) .brand-mark img { background: #fff; padding: 3px 8px; box-shadow: 0 6px 18px -8px rgba(6, 15, 36, .5); }
 
 /* once the page scrolls, go back to a solid readable bar */
 body:has(.hm-hero, .sub-hero) .site-header.is-scrolled {
