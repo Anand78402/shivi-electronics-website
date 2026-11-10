@@ -150,8 +150,10 @@ body:has(.hm-hero, .sub-hero) .site-header:not(.is-scrolled) .header-phone,
 body:has(.hm-hero, .sub-hero) .site-header:not(.is-scrolled) .header-phone strong { color: #fff; }
 body:has(.hm-hero, .sub-hero) .site-header:not(.is-scrolled) .nav-toggle { background: rgba(255, 255, 255, .14); border-color: rgba(255, 255, 255, .45); color: #fff; }
 
-/* the logo is a transparent dark-navy PNG, so seat it on a white plate over the dark hero */
-body:has(.hm-hero, .sub-hero) .site-header:not(.is-scrolled) .brand-mark img { background: #fff; padding: 3px 8px; box-shadow: 0 6px 18px -8px rgba(6, 15, 36, .5); }
+/* logo: transparent (no background). Light version over the hero, colour version on the solid scrolled bar */
+.site-header .logo-light { display: none; }
+body:has(.hm-hero, .sub-hero) .site-header:not(.is-scrolled) .logo-dark { display: none; }
+body:has(.hm-hero, .sub-hero) .site-header:not(.is-scrolled) .logo-light { display: block; filter: drop-shadow(0 2px 6px rgba(0, 0, 0, .25)); }
 
 /* once the page scrolls, go back to a solid readable bar */
 body:has(.hm-hero, .sub-hero) .site-header.is-scrolled {
