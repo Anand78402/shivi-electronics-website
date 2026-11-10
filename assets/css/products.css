@@ -130,4 +130,6 @@
 .pr-cat-photos { display: flex; justify-content: center; gap: 14px; padding: 18px 12px 12px; margin: 4px 0 14px; border-radius: 14px; background: linear-gradient(180deg, #f1f5fb, #e2e9f6); border: 1px solid #dbe2ef; }
 .pr-cat-photos figure { margin: 0; display: grid; justify-items: center; align-content: end; gap: 8px; }
 .pr-cat-photos img { height: 190px; width: auto; max-width: 100%; object-fit: contain; filter: drop-shadow(0 10px 12px rgba(10, 31, 92, .22)); }
+.pr-cat-photos.batt { flex-wrap: wrap; align-items: flex-end; }
+.pr-cat-photos.batt img { height: 120px; mix-blend-mode: multiply; filter: none; }
 .pr-cat-photos figcaption { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--text-faint); }
