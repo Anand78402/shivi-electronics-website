@@ -123,15 +123,31 @@ document.addEventListener('DOMContentLoaded', function () {
     var value = input.value.trim();
     var valid = true;
 
-    if (input.hasAttribute('required') && !value) valid = false;
+    if ((input.hasAttribute('required') || input.type === 'email') && !value) valid = false;
+    if (valid && input.name === 'name' && value) {
+      var blockedNames = ['kajal kajal kumari', 'samdeep', 'alina khan', 'ankita kumari'];
+      valid = blockedNames.indexOf(value.replace(/\s+/g, ' ').toLowerCase()) === -1;
+    }
     if (valid && input.type === 'email' && value) {
-      valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+      valid = /^[^\s@]+@gmail\.com$/i.test(value);
     }
     if (valid && input.type === 'tel' && value) {
-      valid = /^[+\d][\d\s-]{7,}$/.test(value);
+      valid = /^\d{10}$/.test(value);
     }
 
     field.classList.toggle('invalid', !valid);
+    if (input.name === 'email' || input.name === 'name' || input.type === 'tel') {
+      var message = field.querySelector('.error-msg');
+      if (!message) {
+        message = document.createElement('div');
+        message.className = 'error-msg';
+        field.appendChild(message);
+      }
+      if (input.name === 'email') message.textContent = 'Enter a valid Gmail address ending in @gmail.com.';
+      else if (input.name === 'name' && blockedNames && !valid && value) message.textContent = 'Please enter a different name.';
+      else if (input.type === 'tel') message.textContent = 'Enter exactly 10 digits, without spaces or country code.';
+      else message.textContent = input.name === 'name' ? 'Please enter your name.' : 'Enter a valid Gmail address ending in @gmail.com.';
+    }
     return valid;
   }
 
@@ -140,8 +156,15 @@ document.addEventListener('DOMContentLoaded', function () {
     fields.forEach(function (field) {
       var input = field.querySelector('input, select, textarea');
       if (!input) return;
+      if (input.type === 'tel') {
+        input.maxLength = 10;
+        input.inputMode = 'numeric';
+        input.pattern = '[0-9]{10}';
+      }
+      if (input.type === 'email') input.required = true;
       input.addEventListener('blur', function () { validateField(field); });
       input.addEventListener('input', function () {
+        if (input.type === 'tel') input.value = input.value.replace(/\D/g, '').slice(0, 10);
         if (field.classList.contains('invalid')) validateField(field);
       });
     });
@@ -267,17 +290,13 @@ document.addEventListener('DOMContentLoaded', function () {
       }).observe(popupSuccess, { attributes: true, attributeFilter: ['class'] });
     }
 
-    // Auto-show shortly after every page load/navigation — but not once the
-    // visitor has already submitted the enquiry popup at least once.
-    var alreadySubmitted = false;
-    try { alreadySubmitted = !!localStorage.getItem('shiviEnquirySubmitted'); } catch (e) {}
-    // ...and only once per browser session, so it doesn't nag on every page.
-    var shownThisSession = false;
-    try { shownThisSession = !!sessionStorage.getItem('shiviPopupShown'); } catch (e) {}
-    if (!alreadySubmitted && !shownThisSession) {
+    // Auto-show only once per browser. Explicit enquiry buttons can still open it.
+    var autoPopupAlreadyShown = false;
+    try { autoPopupAlreadyShown = !!localStorage.getItem('shiviAutoPopupShown'); } catch (e) {}
+    if (!autoPopupAlreadyShown) {
       setTimeout(function () {
+        try { localStorage.setItem('shiviAutoPopupShown', '1'); } catch (e) {}
         openPopup('Quick Enquiry');
-        try { sessionStorage.setItem('shiviPopupShown', '1'); } catch (e) {}
       }, 1200);
     }
   }

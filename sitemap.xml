@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://shivielectronicssystem.com/</loc></url>
-  <url><loc>https://shivielectronicssystem.com/about.html</loc></url>
-  <url><loc>https://shivielectronicssystem.com/products.html</loc></url>
-  <url><loc>https://shivielectronicssystem.com/services.html</loc></url>
-  <url><loc>https://shivielectronicssystem.com/industries.html</loc></url>
-  <url><loc>https://shivielectronicssystem.com/contact.html</loc></url>
+  <url><loc>https://shivielectronicssystem.com/about</loc></url>
+  <url><loc>https://shivielectronicssystem.com/products</loc></url>
+  <url><loc>https://shivielectronicssystem.com/services</loc></url>
+  <url><loc>https://shivielectronicssystem.com/industries</loc></url>
+  <url><loc>https://shivielectronicssystem.com/contact</loc></url>
+  <url><loc>https://shivielectronicssystem.com/online-ups</loc></url>
+  <url><loc>https://shivielectronicssystem.com/alpha-online-ups</loc></url>
+  <url><loc>https://shivielectronicssystem.com/beta-online-ups</loc></url>
+  <url><loc>https://shivielectronicssystem.com/gama-online-ups</loc></url>
+  <url><loc>https://shivielectronicssystem.com/servo-stabilizer</loc></url>
+  <url><loc>https://shivielectronicssystem.com/inverters</loc></url>
+  <url><loc>https://shivielectronicssystem.com/ups-amc</loc></url>
 </urlset>
